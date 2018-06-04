@@ -7,7 +7,7 @@ import classNames from 'classnames';
 
 class MenuTextOne extends React.Component{
   toggleMenu = () => {
-    this.props.menuActions.toggleMenu(true);
+    this.props.menuActions.toggleMenu(false);
   }
   render(){
     const {
