@@ -50,8 +50,17 @@ class MenuTextOne extends React.Component{
         >
           Menu two
         </Link>
-        </div>
       </div>
+      <div className="two_menu_panel__sect">
+        <Link
+          to='/menus/3'
+          className = 'two_menu_panel__link'
+          onClick = {this.toggleMenu}
+        >
+          Menu Three
+        </Link>
+      </div>
+    </div>
     )
   }
 }

@@ -60,11 +60,6 @@
 }
 
 
-
-
-
-
-
 .two_menu_btn{
   position: fixed;
   mix-blend-mode:  difference;
@@ -149,16 +144,5 @@
 }
 
 @media screen and (max-width: 992px) {
-  .two_menu_panel{
-    height: 100vh;
-    width: 100vw;
 
-    left: 0px;
-    bottom: 0px;
-    transform: rotate(0deg);
-  }
-  .two_menu_panel--display{
-    left: 100vw;
-    bottom: 100vh;
-  }
 }

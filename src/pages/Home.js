@@ -12,6 +12,10 @@ class Home extends React.Component{
         <Link to="/menus/2">
           Menu two
         </Link>
+        <br/>
+        <Link to="/menus/3">
+          Menu three
+        </Link>
 			</div>
 	  );
   }

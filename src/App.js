@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import {Switch, Route} from 'react-router-dom';
+
 import './App.css';
+
 import './styles/menuone.css';
 import './styles/menutwo.css';
+import './styles/menuthree.css';
+
 import Home from './pages/Home';
 import MenuPageOne from './pages/MenuPageOne';
 import MenuPageTwo from './pages/MenuPageTwo';
+import MenuPageThree from './pages/MenuPageThree';
 
 class App extends Component {
   render() {
@@ -27,6 +32,12 @@ class App extends Component {
             exact path="/menus/2"
             render={(props) =>
               <MenuPageTwo {...props} />
+            }
+          />
+          <Route
+            exact path="/menus/3"
+            render={(props) =>
+              <MenuPageThree {...props} />
             }
           />
         </Switch>

@@ -16,9 +16,7 @@ class MenuPanelOne extends React.Component{
     );
 
     return(
-      <div
-        className = {menuClassName}
-      >
+      <div className = {menuClassName}>
       </div>
     )
   }
