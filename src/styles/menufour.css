@@ -1,14 +1,77 @@
-.four_menu_panel{
-  opacity: 0;
+.four_menu_background {
   height: 100vh;
   width: 100vw;
   position: fixed;
-  background-color: #1a52d3;
+  background-color: #aaa;
 }
-.four_menu_panel--display{
-  animation: AppearAtEnd .4s linear;
+.four_menu_background--display {
+  animation: TurnBlue .4s linear;
   animation-fill-mode: both;
 }
+.four_menu_background--hidden {
+  animation: TurnGrey .4s linear;
+  animation-fill-mode: both;
+}
+
+@keyframes TurnBlue {
+  0% {
+  background-color: #aaa;
+  }
+  99% {
+  background-color: #aaa;
+  }
+  100% {
+    background-color: #1a52d3;
+  }
+}
+@keyframes TurnGrey {
+  0% {
+  background-color: #1a52d3;
+  }
+  99% {
+  background-color: #1a52d3;
+  }
+  100% {
+    background-color: #aaa;
+  }
+}
+
+.four_menu_panel__links {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  left: 50%;
+  margin-left: 24px;
+  top: 25vh;
+}
+.four_menu_panel__links--display {
+  pointer-events: auto;
+  animation: AppearLate .8s linear;
+  animation-fill-mode: both;
+}
+@keyframes AppearLate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.four_menu_panel__link_container {
+  margin-bottom: 48px;
+}
+.four_menu_panel__link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
 .four_menu_panel__animation_show {
   height: 1px;
   width: 1px;
@@ -17,11 +80,6 @@
   border-radius: 1px;
   position: fixed;
   background-color: #1a52d3;
-
-  -webkit-transition: .4s ease-out;
-  -moz-transition: .4s ease-out;
-  -o-transition: .4s ease-out;
-  transition: .4s ease-out;
 }
 .four_menu_panel__animation_show--display {
   animation: CircleExpand .4s linear;
@@ -37,10 +95,6 @@
   position: fixed;
   background-color: #aaa;
 
-  -webkit-transition: .4s ease-out;
-  -moz-transition: .4s ease-out;
-  -o-transition: .4s ease-out;
-  transition: .4s ease-out;
 }
 .four_menu_panel__animation_hide--display {
   animation: CircleExpand .4s linear;

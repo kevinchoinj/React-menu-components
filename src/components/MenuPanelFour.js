@@ -1,19 +1,20 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
+import MenuTextFour from './MenuTextFour';
 
 class MenuPanelFour extends React.Component{
   render(){
     const {
       menuDisplay,
     } = this.props;
-
-    const menuClassName = classNames(
-      'four_menu_panel',
+    const backgroundName = classNames(
+      'four_menu_background',
       {
-        'four_menu_panel--display':menuDisplay
+        'four_menu_background--display':menuDisplay,
+        'four_menu_background--hidden':!menuDisplay
       }
-    );
+    )
     const animationShowName = classNames(
       'four_menu_panel__animation_show',
       {
@@ -28,11 +29,10 @@ class MenuPanelFour extends React.Component{
     );
     return(
       <div>
-      <div className = {menuClassName}>
-      </div>
-
-      <div className={animationShowName}/>
-      <div className={animationHideName}/>
+        <div className={backgroundName}/>
+        <MenuTextFour />
+        <div className={animationShowName}/>
+        <div className={animationHideName}/>
       </div>
     )
   }
