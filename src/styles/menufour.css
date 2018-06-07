@@ -1,8 +1,12 @@
 .four_menu_background {
   height: 100vh;
   width: 100vw;
+  right:0px;
+  top: 0px;
   position: fixed;
-  background-color: #aaa;
+  background-color: none;
+    background-position: right top;
+  background-size: 100vw;
 }
 .four_menu_background--display {
   animation: TurnBlue .4s linear;
@@ -11,28 +15,30 @@
 .four_menu_background--hidden {
   animation: TurnGrey .4s linear;
   animation-fill-mode: both;
+  background-repeat: no-repeat;
+
 }
 
 @keyframes TurnBlue {
   0% {
-  background-color: #aaa;
   }
   99% {
-  background-color: #aaa;
   }
   100% {
+    background-image: none;
     background-color: #1a52d3;
   }
 }
 @keyframes TurnGrey {
   0% {
-  background-color: #1a52d3;
+    background-image: none;
+    background-color: #1a52d3;
   }
   99% {
-  background-color: #1a52d3;
+    background-image: none;
+    background-color: #1a52d3;
   }
   100% {
-    background-color: #aaa;
   }
 }
 
@@ -62,12 +68,31 @@
 }
 
 .four_menu_panel__link_container {
-  margin-bottom: 48px;
+  /*margin-bottom: 48px;*/
+  display: flex;
+}
+
+.four_menu_panel__link_container:hover .four_menu_panel__line {
+  width: 48px;
+}
+
+.four_menu_panel__line {
+  width: 35px;
+  margin-top:14px;
+  border-top: 2px solid #fff;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
 }
 .four_menu_panel__link {
+  padding-left: 28px;
+  padding-right: 28px;
+  line-height: 129px;
+  vertical-align: middle;
   text-decoration: none;
   color: #fff;
-  font-size: 36px;
+  font-size: 32px;
   text-transform: uppercase;
   font-family: 'PT Sans Narrow', sans-serif;
 }
@@ -80,6 +105,7 @@
   border-radius: 1px;
   position: fixed;
   background-color: #1a52d3;
+
 }
 .four_menu_panel__animation_show--display {
   animation: CircleExpand .4s linear;
@@ -93,7 +119,9 @@
   top: 0px;
   border-radius: 1px;
   position: fixed;
-  background-color: #aaa;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 100vw;
 
 }
 .four_menu_panel__animation_hide--display {
@@ -116,22 +144,16 @@
   0% {
     height: 1px;
     width: 1px;
-    right: 0px;
-    top: 0px;
     border-radius: 1px;
   }
   85% {
-    height: 200vw;
-    width: 200vw;
-    top: -100vw;
-    right: -100vw;
-    border-radius: 100vw;
+    height: 100vw;
+    width: 100vw;
+    border-bottom-left-radius: 100vw;
   }
   99% {
-    height: 200vw;
-    width: 200vw;
-    top: -100vw;
-    right: -100vw;
+    height: 100vw;
+    width: 100vw;
     border-radius: 0px;
   }
   100% {

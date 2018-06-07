@@ -25,6 +25,7 @@ class MenuTextFour extends React.Component{
         className = {menuClassName}
       >
         <div className="four_menu_panel__link_container">
+          <div className="four_menu_panel__line"/>
           <Link
             to='/'
             className = 'four_menu_panel__link'
@@ -34,6 +35,7 @@ class MenuTextFour extends React.Component{
           </Link>
         </div>
         <div className="four_menu_panel__link_container">
+          <div className="four_menu_panel__line"/>
           <Link
             to='/menus/1'
             className = 'four_menu_panel__link'
@@ -43,6 +45,7 @@ class MenuTextFour extends React.Component{
           </Link>
         </div>
         <div className="four_menu_panel__link_container">
+          <div className="four_menu_panel__line"/>
           <Link
             to='/menus/2'
             className = 'four_menu_panel__link'

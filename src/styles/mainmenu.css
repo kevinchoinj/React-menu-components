@@ -9,6 +9,7 @@
   -moz-transition: .4s ease-out;
   -o-transition: .4s ease-out;
   transition: .4s ease-out;
+  z-index: 999;
 }
 .main_menu_panel--display{
   bottom: 0px;

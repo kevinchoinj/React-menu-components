@@ -7,6 +7,7 @@ import './styles/menuone.css';
 import './styles/menutwo.css';
 import './styles/menuthree.css';
 import './styles/menufour.css';
+import './styles/menufive.css';
 
 import Home from './pages/Home';
 
@@ -17,6 +18,7 @@ import MenuPageOne from './pages/MenuPageOne';
 import MenuPageTwo from './pages/MenuPageTwo';
 import MenuPageThree from './pages/MenuPageThree';
 import MenuPageFour from './pages/MenuPageFour';
+import MenuPageFive from './pages/MenuPageFive';
 
 class App extends Component {
   render() {
@@ -50,6 +52,12 @@ class App extends Component {
             exact path="/menus/4"
             render={(props) =>
               <MenuPageFour {...props} />
+            }
+          />
+          <Route
+            exact path="/menus/5"
+            render={(props) =>
+              <MenuPageFive {...props} />
             }
           />
         </Switch>

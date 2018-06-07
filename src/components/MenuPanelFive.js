@@ -14,25 +14,23 @@ class MenuPanelFive extends React.Component{
         'five_menu_panel--display':menuDisplay
       }
     );
-    const animationShowName = classNames(
-      'five_menu_panel__animation_show',
-      {
-        'five_menu_panel__animation_show--display':menuDisplay
-      }
-    );
-    const animationHideName = classNames(
-      'five_menu_panel__animation_hide',
-      {
-        'five_menu_panel__animation_hide--display': !menuDisplay
-      }
-    );
-    return(
-      <div>
-      <div className = {menuClassName}>
-      </div>
 
-      <div className={animationShowName}/>
-      <div className={animationHideName}/>
+    return(
+      <div className = {menuClassName}>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
+        <li className="five_menu_block"/>
       </div>
     )
   }

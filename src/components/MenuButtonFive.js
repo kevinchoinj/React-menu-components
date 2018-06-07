@@ -14,30 +14,30 @@ class MenuButtonOne extends React.Component{
     } = this.props;
 
     const menuLine1Names= classNames(
-      'one_menu_line1',
+      'five_menu_line1',
       {
-        'one_menu_line1--display':menuDisplay,
+        'five_menu_line1--display':menuDisplay,
       }
     );
     const menuLine2Names= classNames(
-      'one_menu_line2',
+      'five_menu_line2',
       {
-        'one_menu_line2--display':menuDisplay,
+        'five_menu_line2--display':menuDisplay,
       }
     );
     const menuLine3Names= classNames(
-      'one_menu_line3',
+      'five_menu_line3',
       {
-        'one_menu_line3--display':menuDisplay,
+        'five_menu_line3--display':menuDisplay,
       }
     );
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = 'one_menu_btn'
+        className = 'five_menu_btn'
       >
         <div
-          className = 'one_menu_btn__container'
+          className = 'five_menu_btn__container'
         >
           <span
             className = {menuLine1Names}

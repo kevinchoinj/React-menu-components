@@ -2,17 +2,23 @@ import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import MenuTextFour from './MenuTextFour';
+import bgimage from '../media/construction.jpg';
 
 class MenuPanelFour extends React.Component{
   render(){
     const {
       menuDisplay,
     } = this.props;
+
+    const bgStyle={
+      backgroundImage: 'url('+bgimage+')'
+    }
+
     const backgroundName = classNames(
       'four_menu_background',
       {
         'four_menu_background--display':menuDisplay,
-        'four_menu_background--hidden':!menuDisplay
+        'four_menu_background--hidden':!menuDisplay,
       }
     )
     const animationShowName = classNames(
@@ -29,10 +35,10 @@ class MenuPanelFour extends React.Component{
     );
     return(
       <div>
-        <div className={backgroundName}/>
+        <div className={backgroundName} style={bgStyle}/>
         <MenuTextFour />
         <div className={animationShowName}/>
-        <div className={animationHideName}/>
+        <div className={animationHideName} style={bgStyle}/>
       </div>
     )
   }
