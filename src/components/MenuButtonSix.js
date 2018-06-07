@@ -4,35 +4,40 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as menuActions from '../actions/menu';
 
-class MainMenuButton extends React.Component{
-	toggleMainMenu = () => {
-    this.props.menuActions.toggleMainMenu(!this.props.mainMenuDisplay);
+class MenuButtonSix extends React.Component{
+	toggleMenu = () => {
+    this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
   render(){
     const {
-      mainMenuDisplay,
+      menuDisplay,
     } = this.props;
 
     const menuLine1Names= classNames(
-      'main_menu_line1',
+      'six_menu_line1',
       {
-        'main_menu_line1--display':mainMenuDisplay,
+        'six_menu_line1--display':menuDisplay,
       }
     );
     const menuLine2Names= classNames(
-      'main_menu_line2',
+      'six_menu_line2',
       {
-        'main_menu_line2--display':mainMenuDisplay,
+        'six_menu_line2--display':menuDisplay,
       }
     );
-
+    const menuLine3Names= classNames(
+      'six_menu_line3',
+      {
+        'six_menu_line3--display':menuDisplay,
+      }
+    );
 	  return(
       <div
-        onClick = {this.toggleMainMenu}
-        className = 'main_menu_btn'
+        onClick = {this.toggleMenu}
+        className = 'six_menu_btn'
       >
         <div
-          className = 'main_menu_btn__container'
+          className = 'six_menu_btn__container'
         >
           <span
             className = {menuLine1Names}
@@ -40,6 +45,10 @@ class MainMenuButton extends React.Component{
           </span>
           <span
             className = {menuLine2Names}
+          >
+          </span>
+          <span
+            className = {menuLine3Names}
           >
           </span>
         </div>
@@ -50,9 +59,9 @@ class MainMenuButton extends React.Component{
 
 export default connect(
   (state, ownProps) => ({
-    mainMenuDisplay:state.menu.mainMenuDisplay,
+    menuDisplay:state.menu.menuDisplay,
   }),
   dispatch => ({
     menuActions: bindActionCreators(menuActions, dispatch),
   }),
-)(MainMenuButton);
+)(MenuButtonSix);

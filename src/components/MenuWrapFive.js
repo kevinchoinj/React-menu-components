@@ -1,6 +1,7 @@
 import React from "react";
 import MenuButtonFive from './MenuButtonFive';
 import MenuPanelFive from './MenuPanelFive';
+import MenuTextFour from './MenuTextFour';
 
 class MenuWrapFive extends React.Component{
   render(){
@@ -8,6 +9,7 @@ class MenuWrapFive extends React.Component{
 			<div>
         <MenuButtonFive />
         <MenuPanelFive />
+        <MenuTextFour/>
 			</div>
 	  );
   }

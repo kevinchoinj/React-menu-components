@@ -5,7 +5,7 @@ import {
 } from '../actions/menu'
 
 const DEFAULT_STATE={
-  menuDisplay: false,
+  menuDisplay: null,
   currentPage: '',
   mainMenuDisplay: false,
 }

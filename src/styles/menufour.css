@@ -49,11 +49,27 @@
   left: 50%;
   margin-left: 24px;
   top: 25vh;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
 }
 .four_menu_panel__links--display {
   pointer-events: auto;
   animation: AppearLate .8s linear;
   animation-fill-mode: both;
+}
+.four_menu_panel__links--hidden {
+  animation: FourDisappear .8s linear;
+  animation-fill-mode: both;
+}
+@keyframes FourDisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 @keyframes AppearLate {
   0% {

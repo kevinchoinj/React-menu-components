@@ -17,8 +17,8 @@ class MenuPanelFour extends React.Component{
     const backgroundName = classNames(
       'four_menu_background',
       {
-        'four_menu_background--display':menuDisplay,
-        'four_menu_background--hidden':!menuDisplay,
+        'four_menu_background--display': menuDisplay,
+        'four_menu_background--hidden': menuDisplay===false,
       }
     )
     const animationShowName = classNames(

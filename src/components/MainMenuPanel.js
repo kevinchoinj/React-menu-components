@@ -19,24 +19,26 @@ class MainMenuPanel extends React.Component{
     return(
       <div className = {menuClassName}>
       <Link to="/">
-        <div>Home</div>
+        <div className="main_menu_section">Home</div>
       </Link>
       <Link to="/menus/1">
-        <div>Menu 1</div>
+        <div className="main_menu_section">Menu 1</div>
       </Link>
       <Link to="/menus/2">
-        <div>Menu 2</div>
+        <div className="main_menu_section">Menu 2</div>
       </Link>
       <Link to="/menus/3">
-        <div>Menu 3</div>
+        <div className="main_menu_section">Menu 3</div>
       </Link>
       <Link to="/menus/4">
-        <div>Menu 4</div>
+        <div className="main_menu_section">Menu 4</div>
       </Link>
       <Link to="/menus/5">
-        <div>Menu 5</div>
+        <div className="main_menu_section">Menu 5</div>
       </Link>
-
+      <Link to="/menus/6">
+        <div className="main_menu_section">Menu 6</div>
+      </Link>
       </div>
     )
   }

@@ -11,7 +11,8 @@ class MenuPanelFive extends React.Component{
     const menuClassName = classNames(
       'five_menu_panel',
       {
-        'five_menu_panel--display':menuDisplay
+        'five_menu_panel--display': menuDisplay,
+        'five_menu_panel--hidden': menuDisplay===false,
       }
     );
 

@@ -16,7 +16,8 @@ class MenuTextFour extends React.Component{
     const menuClassName = classNames(
       'four_menu_panel__links',
       {
-        'four_menu_panel__links--display': menuDisplay
+        'four_menu_panel__links--display': menuDisplay,
+        'four_menu_panel__links--hidden': menuDisplay===false,
       }
     );
 
