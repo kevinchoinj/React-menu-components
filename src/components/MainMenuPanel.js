@@ -42,6 +42,9 @@ class MainMenuPanel extends React.Component{
       <Link to="/menus/7">
         <div className="main_menu_section">Menu 7</div>
       </Link>
+      <Link to="/menus/8">
+        <div className="main_menu_section">Menu 8</div>
+      </Link>
       </div>
     )
   }
