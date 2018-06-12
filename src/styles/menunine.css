@@ -1,3 +1,10 @@
+.nine_page_wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+.nine_page_wrapper--display {
+  overflow-y: hidden;
+}
 .nine_menu_panel__right{
   height: 100vh;
   width: 33vw;
@@ -15,6 +22,7 @@
 .nine_menu_panel__left{
   height: 100vh;
   width: 33vw;
+  min-width: 510px;
   position: fixed;
   pointer-events: none;
   background-color: #000;
@@ -25,15 +33,16 @@
   overflow: hidden;
   left: -33vw;
 }
+
 .nine_menu_panel__left--display{
   left: 0px;
 }
 
 .nine_indicator {
-  font-size: 17px;
-  color: #fff;
+  font-size: 24px;
+  color: #aaa;
   position: absolute;
-  right: 0px;
+  right: 14px;
   top: 40px;
   transform: rotate(270deg);
   letter-spacing: 1px;
@@ -70,7 +79,7 @@
   overflow: auto;
   height: 100vh;
   width: calc(33vw + 20px);
-  min-width: 550px;
+  min-width: 530px;
 }
 .nine_menu_panel__links--display{
   pointer-events: auto;
@@ -124,16 +133,16 @@
 }
 
 .nine_menu_panel__link {
-  line-height: 129px;
   text-decoration: none;
   color: #444;
-  font-size: 86px;
+  font-size: 66px;
   width: calc(33vw + 20px);
   font-family: 'Libre Baskerville', serif;
   -webkit-transition: .2s ease-out;
   -moz-transition: .2s ease-out;
   -o-transition: .2s ease-out;
   transition: .2s ease-out;
+  line-height: 114px;
 }
 .nine_menu_panel__link:hover,
 .nine_menu_panel__link:focus{
@@ -141,8 +150,21 @@
   text-decoration: none;
 }
 .nine_menu_panel__link_div {
+  display: flex;
   padding-left: 28px;
   padding-right: 28px;
+}
+.nine_menu_panel__link_div:hover .nine_menu_panel__link{
+  color: #fff;
+  font-size: 70px;
+}
+.nine_number {
+  float: left;
+  font-size: 24px;
+  transform: rotate(270deg);
+}
+.nine_menu_panel__link_title {
+  margin-left: 14px;
 }
 .nine_menu_btn{
   position: fixed;
@@ -299,4 +321,22 @@
 .nine_text_right__subtext {
   font-size: 16px;
   color: #444;
+}
+@media screen and (max-width: 992px) {
+  .nine_menu_panel__left {
+    left: -100vw;
+    width: 100vw;
+  }
+  .nine_menu_panel__left--display {
+    left: 0px;
+  }
+  .nine_menu_panel__links {
+    width: 100vw;
+  }
+  .nine_menu_panel__right {
+    display: none;
+  }
+  .nine_menu_background {
+    display: none;
+  }
 }
