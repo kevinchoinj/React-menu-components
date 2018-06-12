@@ -1,5 +1,5 @@
 import React from "react";
-import MenuWrapFour from '../components/MenuWrapFour';
+import MenuWrapFour from '../components/4/MenuWrapFour';
 
 class MenuPageFour extends React.Component{
   render(){

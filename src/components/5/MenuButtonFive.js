@@ -2,9 +2,9 @@ import React from "react";
 import classNames from 'classnames';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
 
-class MenuButtonSix extends React.Component{
+class MenuButtonOne extends React.Component{
 	toggleMenu = () => {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
@@ -14,30 +14,30 @@ class MenuButtonSix extends React.Component{
     } = this.props;
 
     const menuLine1Names= classNames(
-      'six_menu_line1',
+      'five_menu_line1',
       {
-        'six_menu_line1--display':menuDisplay,
+        'five_menu_line1--display':menuDisplay,
       }
     );
     const menuLine2Names= classNames(
-      'six_menu_line2',
+      'five_menu_line2',
       {
-        'six_menu_line2--display':menuDisplay,
+        'five_menu_line2--display':menuDisplay,
       }
     );
     const menuLine3Names= classNames(
-      'six_menu_line3',
+      'five_menu_line3',
       {
-        'six_menu_line3--display':menuDisplay,
+        'five_menu_line3--display':menuDisplay,
       }
     );
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = 'six_menu_btn'
+        className = 'five_menu_btn'
       >
         <div
-          className = 'six_menu_btn__container'
+          className = 'five_menu_btn__container'
         >
           <span
             className = {menuLine1Names}
@@ -64,4 +64,4 @@ export default connect(
   dispatch => ({
     menuActions: bindActionCreators(menuActions, dispatch),
   }),
-)(MenuButtonSix);
+)(MenuButtonOne);

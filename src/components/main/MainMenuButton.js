@@ -2,7 +2,7 @@ import React from "react";
 import classNames from 'classnames';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
 
 class MainMenuButton extends React.Component{
 	toggleMainMenu = () => {

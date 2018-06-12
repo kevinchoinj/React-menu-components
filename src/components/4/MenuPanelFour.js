@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import MenuTextFour from './MenuTextFour';
-import bgimage from '../media/construction.jpg';
+import bgimage from '../../media/construction.jpg';
 
 class MenuPanelFour extends React.Component{
   render(){

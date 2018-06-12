@@ -2,10 +2,15 @@ import React from "react";
 import classNames from 'classnames';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
+import debounce from 'debounce';
 
-class MenuButtonOne extends React.Component{
-	toggleMenu = () => {
+class MenuButtonSeven extends React.Component{
+  constructor(props) {
+    super(props);
+    this.toggleMenu = debounce(this.toggleMenu.bind(this), 350);
+  }
+	toggleMenu() {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
   render(){
@@ -14,30 +19,30 @@ class MenuButtonOne extends React.Component{
     } = this.props;
 
     const menuLine1Names= classNames(
-      'one_menu_line1',
+      'seven_menu_line1',
       {
-        'one_menu_line1--display':menuDisplay,
+        'seven_menu_line1--display':menuDisplay,
       }
     );
     const menuLine2Names= classNames(
-      'one_menu_line2',
+      'seven_menu_line2',
       {
-        'one_menu_line2--display':menuDisplay,
+        'seven_menu_line2--display':menuDisplay,
       }
     );
     const menuLine3Names= classNames(
-      'one_menu_line3',
+      'seven_menu_line3',
       {
-        'one_menu_line3--display':menuDisplay,
+        'seven_menu_line3--display':menuDisplay,
       }
     );
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = 'one_menu_btn'
+        className = 'seven_menu_btn'
       >
         <div
-          className = 'one_menu_btn__container'
+          className = 'seven_menu_btn__container'
         >
           <span
             className = {menuLine1Names}
@@ -64,4 +69,4 @@ export default connect(
   dispatch => ({
     menuActions: bindActionCreators(menuActions, dispatch),
   }),
-)(MenuButtonOne);
+)(MenuButtonSeven);

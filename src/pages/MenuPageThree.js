@@ -1,5 +1,5 @@
 import React from "react";
-import MenuWrapThree from '../components/MenuWrapThree';
+import MenuWrapThree from '../components/3/MenuWrapThree';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as menuActions from '../actions/menu';

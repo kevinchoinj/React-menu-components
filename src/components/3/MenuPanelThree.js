@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
 
 var FontAwesome = require('react-fontawesome');
 

@@ -1,5 +1,5 @@
 import React from "react";
-import MenuWrapSix from '../components/MenuWrapSix';
+import MenuWrapSix from '../components/6/MenuWrapSix';
 
 class MenuPageSix extends React.Component{
   render(){

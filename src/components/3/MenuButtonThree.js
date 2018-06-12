@@ -1,7 +1,7 @@
 import React from "react";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
 import classNames from 'classnames';
 
 class MenuButtonThree extends React.Component{

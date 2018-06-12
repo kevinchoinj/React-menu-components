@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
-import bgimage from '../media/construction.jpg';
+import bgimage from '../../media/construction.jpg';
 import MenuTextEight from './MenuTextEight';
 
 class MenuPanelEight extends React.Component{

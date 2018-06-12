@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
@@ -14,9 +14,9 @@ class MenuTextOne extends React.Component{
       menuDisplay,
     } = this.props;
     const menuClassName = classNames(
-      'one_menu_panel__links',
+      'two_menu_panel__links',
       {
-        'one_menu_panel__links--display': menuDisplay
+        'two_menu_panel__links--display': menuDisplay
       }
     );
 
@@ -24,30 +24,43 @@ class MenuTextOne extends React.Component{
       <div
         className = {menuClassName}
       >
+      <div className="two_menu_panel__sect">
         <Link
           to='/'
-          className = 'one_menu_panel__link'
+          className = 'two_menu_panel__link'
           onClick = {this.toggleMenu}
         >
           Home
         </Link>
-        <br/>
+      </div>
+      <div className="two_menu_panel__sect">
         <Link
           to='/menus/1'
-          className = 'one_menu_panel__link'
+          className = 'two_menu_panel__link'
           onClick = {this.toggleMenu}
         >
           Menu one
         </Link>
-        <br/>
+      </div>
+      <div className="two_menu_panel__sect">
         <Link
           to='/menus/2'
-          className = 'one_menu_panel__link'
+          className = 'two_menu_panel__link'
           onClick = {this.toggleMenu}
         >
           Menu two
         </Link>
       </div>
+      <div className="two_menu_panel__sect">
+        <Link
+          to='/menus/3'
+          className = 'two_menu_panel__link'
+          onClick = {this.toggleMenu}
+        >
+          Menu Three
+        </Link>
+      </div>
+    </div>
     )
   }
 }

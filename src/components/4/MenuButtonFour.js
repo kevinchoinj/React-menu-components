@@ -2,7 +2,7 @@ import React from "react";
 import classNames from 'classnames';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
-import * as menuActions from '../actions/menu';
+import * as menuActions from '../../actions/menu';
 
 class MenuButtonOne extends React.Component{
 	toggleMenu = () => {
@@ -14,30 +14,30 @@ class MenuButtonOne extends React.Component{
     } = this.props;
 
     const menuLine1Names= classNames(
-      'five_menu_line1',
+      'one_menu_line1',
       {
-        'five_menu_line1--display':menuDisplay,
+        'one_menu_line1--display':menuDisplay,
       }
     );
     const menuLine2Names= classNames(
-      'five_menu_line2',
+      'one_menu_line2',
       {
-        'five_menu_line2--display':menuDisplay,
+        'one_menu_line2--display':menuDisplay,
       }
     );
     const menuLine3Names= classNames(
-      'five_menu_line3',
+      'one_menu_line3',
       {
-        'five_menu_line3--display':menuDisplay,
+        'one_menu_line3--display':menuDisplay,
       }
     );
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = 'five_menu_btn'
+        className = 'one_menu_btn'
       >
         <div
-          className = 'five_menu_btn__container'
+          className = 'one_menu_btn__container'
         >
           <span
             className = {menuLine1Names}
