@@ -115,6 +115,114 @@ const BackgroundDisplay = ({hoverOption, backgroundClassName, currentPage}) => {
   }
 }
 
+const RightTextDisplay = ({hoverOption}) => {
+  if (hoverOption===1){
+    return (
+      <RightTextAreaDisplay
+        title="Lorem"
+        year="2018"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===2){
+    return (
+      <RightTextAreaDisplay
+        title="Ipsum"
+        year="2017"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===3){
+    return (
+      <RightTextAreaDisplay
+        title="Dolor"
+        year="2018"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===4){
+    return (
+      <RightTextAreaDisplay
+        title="Sit"
+        year="2017"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===5){
+    return (
+      <RightTextAreaDisplay
+        title="Amet"
+        year="2018"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===6){
+    return (
+      <RightTextAreaDisplay
+        title="Consectetur"
+        year="2017"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===7){
+    return (
+      <RightTextAreaDisplay
+        title="Adipiscing"
+        year="2018"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===8){
+    return (
+      <RightTextAreaDisplay
+        title="Elit"
+        year="2017"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else if (hoverOption===9){
+    return (
+      <RightTextAreaDisplay
+        title="Sed"
+        year="2018"
+        body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    )
+  }
+  else return null;
+}
+
+const RightTextAreaDisplay = ({title, year, body}) => {
+  return (
+    <div className="nine_text_right">
+    <div className="nine_text_right__title">
+      {title}
+    </div>
+    <div className="nine_text_right__subcontainer">
+      <div className="nine_text_right__subtitle">
+        <div className="nine_text_right__label">
+        Year:
+        </div>
+        <div className="nine_text_right__subvalue">
+          {year}
+        </div>
+      </div>
+    </div>
+
+    <div className="nine_text_right__subtext">
+      {body}
+    </div>
+  </div>
+  )
+}
 class MenuPanel extends React.Component{
   render(){
     const {
@@ -157,6 +265,9 @@ class MenuPanel extends React.Component{
           <MenuText />
         </div>
         <div className = {menuClassNameRight}>
+          <RightTextDisplay
+            hoverOption={hoverOption}
+          />
         </div>
       </div>
     )

@@ -6,6 +6,7 @@ import * as menuActions from '../../actions/menu';
 
 class SamplePage1 extends React.Component{
   componentDidMount(){
+    window.scrollTo(0, 0);
     this.props.menuActions.setPageName(1);
   }
   render(){
