@@ -1,6 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
+import * as menuActions from '../../actions/menu';
+import {bindActionCreators} from 'redux';
+import {Link} from 'react-router-dom';
 
 import image1 from '../../media/1.jpg';
 import image2 from '../../media/2.jpg';
@@ -14,10 +17,15 @@ import image9 from '../../media/9.jpg';
 
 import MenuText from './MenuText';
 
-const BackgroundDisplay = ({hoverOption, backgroundClassName, currentPage}) => {
+const BackgroundDisplay = ({hoverOption, backgroundClassName, currentPage, toggleMenu}) => {
   if (hoverOption===1){
     return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image1+')'}}/>
+      <Link
+        to='/menus/9/1'
+        onClick = {toggleMenu}
+      >
+        <div className={backgroundClassName} style={{backgroundImage: 'url('+image1+')'}}/>
+      </Link>
     )
   }
   else if (hoverOption===2){
@@ -60,59 +68,7 @@ const BackgroundDisplay = ({hoverOption, backgroundClassName, currentPage}) => {
     <div className={backgroundClassName} style={{backgroundImage: 'url('+image9+')'}}/>
     )
   }
-
-  else if (currentPage){
-    if (currentPage===1){
-      return (
-        <div className={backgroundClassName} style={{backgroundImage: 'url('+image1+')'}}/>
-      )
-    }
-    else if (currentPage===2){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image2+')'}}/>
-      )
-    }
-    else if (currentPage===3){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image3+')'}}/>
-      )
-    }
-    else if (currentPage===4){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image4+')'}}/>
-      )
-    }
-    else if (currentPage===5){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image5+')'}}/>
-      )
-    }
-    else if (currentPage===6){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image6+')'}}/>
-      )
-    }
-    else if (currentPage===7){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image7+')'}}/>
-      )
-    }
-    else if (currentPage===8){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image8+')'}}/>
-      )
-    }
-    else if (currentPage===9){
-      return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image9+')'}}/>
-      )
-    }
-  }
-  else {
-    return (
-      <div className={backgroundClassName} style={{backgroundImage: 'url('+image1+')'}}/>
-    )
-  }
+  else return null;
 }
 
 const RightTextDisplay = ({hoverOption}) => {
@@ -224,6 +180,10 @@ const RightTextAreaDisplay = ({title, year, body}) => {
   )
 }
 class MenuPanel extends React.Component{
+  toggleMenu = () => {
+    this.props.menuActions.hoverMenuOption('');
+    this.props.menuActions.toggleMenu(false);
+  }
   render(){
     const {
       menuDisplay,
@@ -257,6 +217,7 @@ class MenuPanel extends React.Component{
           backgroundClassName={backgroundClassName}
           hoverOption={hoverOption}
           currentPage={currentPage}
+          toggleMenu={this.toggleMenu}
         />
         <div className={menuClassNameLeft}>
           <div className="nine_indicator">
@@ -281,5 +242,6 @@ export default connect(
     currentPage: state.menu.currentPage,
   }),
   dispatch => ({
+    menuActions: bindActionCreators(menuActions, dispatch),
   }),
 )(MenuPanel);

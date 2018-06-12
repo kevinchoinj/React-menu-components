@@ -84,38 +84,40 @@
 .nine_menu_panel__links--display{
   pointer-events: auto;
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div {
+.nine_menu_panel__links--display .nine_menu_panel__container {
   animation: NineFadeIn .3s linear;
   animation-fill-mode: both;
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(1) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(1) {
   animation-delay: .1s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(2) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(2) {
   animation-delay: .2s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(3) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(3) {
   animation-delay: .3s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(4) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(4) {
   animation-delay: .4s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(5) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(5) {
   animation-delay: .5s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(6) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(6) {
   animation-delay: .6s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(7) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(7) {
   animation-delay: .7s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(8) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(8) {
   animation-delay: .6s
 }
-.nine_menu_panel__links--display .nine_menu_panel__link_div:nth-child(9) {
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(9) {
   animation-delay: .7s
 }
-
+.nine_menu_panel__links--display .nine_menu_panel__container:nth-child(10) {
+  animation-delay: .8s
+}
 
 @keyframes NineFadeIn {
   0% {
@@ -322,7 +324,7 @@
   font-size: 16px;
   color: #444;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 1590px) {
   .nine_menu_panel__left {
     left: -100vw;
     width: 100vw;

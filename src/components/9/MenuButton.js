@@ -6,6 +6,7 @@ import * as menuActions from '../../actions/menu';
 
 class MenuButton extends React.Component{
 	toggleMenu = () => {
+    this.props.menuActions.hoverMenuOption('');
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
   render(){

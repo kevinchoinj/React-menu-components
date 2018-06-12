@@ -25,7 +25,7 @@ class MenuText extends React.Component{
 
     return(
       <div className = {menuClassName}>
-
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/9/1'
           className = 'nine_menu_panel__link'
@@ -38,7 +38,9 @@ class MenuText extends React.Component{
               </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/9/2'
           className = 'nine_menu_panel__link'
@@ -51,7 +53,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/9/3'
           className = 'nine_menu_panel__link'
@@ -64,7 +68,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/3'
           className = 'nine_menu_panel__link'
@@ -77,7 +83,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/4'
           className = 'nine_menu_panel__link'
@@ -90,7 +98,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/5'
           className = 'nine_menu_panel__link'
@@ -103,7 +113,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/6'
           className = 'nine_menu_panel__link'
@@ -116,7 +128,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/6'
           className = 'nine_menu_panel__link'
@@ -129,7 +143,9 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
+        <div className="nine_menu_panel__container">
         <Link
           to='/menus/6'
           className = 'nine_menu_panel__link'
@@ -142,6 +158,7 @@ class MenuText extends React.Component{
             </div>
           </div>
         </Link>
+        </div>
 
       </div>
     )

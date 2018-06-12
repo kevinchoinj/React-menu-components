@@ -5,7 +5,7 @@ import MenuPanel from './MenuPanel';
 class MenuWrap extends React.Component{
   render(){
 	  return(
-			<div className="nine_menu_wrapper">
+			<div>
         <MenuButton />
         <MenuPanel />
 			</div>
