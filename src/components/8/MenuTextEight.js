@@ -20,39 +20,24 @@ class MenuTextEight extends React.Component{
       }
     );
 
+    const menuValues = [
+      {text: 'Menu1', link: '/menus/1'},
+      {text: 'Menu2', link: '/menus/2'},
+      {text: 'Menu3', link: '/menus/3'},
+    ]
     return(
-      <div
-        className = {menuClassName}
-      >
-          <div className = 'eight_menu_panel__link_div'>
-            <Link
-              to='/'
-              className = 'eight_menu_panel__link'
-              onClick = {this.toggleMenu}
-            >
-              Home
-            </Link>
-          </div>
-
-          <div className = 'eight_menu_panel__link_div'>
-            <Link
-              to='/menus/1'
-              className = 'eight_menu_panel__link'
-              onClick = {this.toggleMenu}
-            >
-              Menu one
-            </Link>
-          </div>
-
-          <div className = 'eight_menu_panel__link_div'>
-            <Link
-              to='/menus/2'
-              className = 'eight_menu_panel__link'
-              onClick = {this.toggleMenu}
-            >
-              Menu two
-            </Link>
-          </div>
+      <div className = {menuClassName}>
+        {menuValues.map((value, index)=>(
+          <div key={index} className = 'eight_menu_panel__link_div'>
+          <Link
+            to={value.link}
+            className = 'eight_menu_panel__link'
+            onClick = {this.toggleMenu}
+          >
+            {value.text}
+          </Link>
+        </div>
+        ))}
       </div>
     )
   }

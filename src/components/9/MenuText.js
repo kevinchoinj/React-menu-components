@@ -16,6 +16,19 @@ class MenuText extends React.Component{
     const {
       menuDisplay,
     } = this.props;
+
+    const menuValues = [
+      {value: '01', text: 'Sample1', link: '/menus/9/1', pageName: 1},
+      {value: '02', text: 'Sample2', link: '/menus/9/2', pageName: 2},
+      {value: '03', text: 'Sample3', link: '/menus/9/3', pageName: 3},
+      {value: '04', text: 'Menus3', link: '/menus/3', pageName: 4},
+      {value: '05', text: 'Menus4', link: '/menus/4', pageName: 5},
+      {value: '06', text: 'Menus5', link: '/menus/5', pageName: 6},
+      {value: '07', text: 'Menus6', link: '/menus/6', pageName: 7},
+      {value: '08', text: 'Menus7', link: '/menus/7', pageName: 8},
+      {value: '09', text: 'Menus8', link: '/menus/8', pageName: 9},
+    ]
+
     const menuClassName = classNames(
       'nine_menu_panel__links',
       {
@@ -25,141 +38,22 @@ class MenuText extends React.Component{
 
     return(
       <div className = {menuClassName}>
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/9/1'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(1)}>
-            <div className="nine_number">01</div>
-              <div className="nine_menu_panel__link_title">
-                Sample1
+        {menuValues.map((value, index)=>(
+          <div key={index} className="nine_menu_panel__container">
+            <Link
+              to={value.link}
+              className = 'nine_menu_panel__link'
+              onClick = {this.toggleMenu}
+            >
+              <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(value.pageName)}>
+                <div className="nine_number">{value.value}</div>
+                  <div className="nine_menu_panel__link_title">
+                    {value.text}
+                  </div>
               </div>
+            </Link>
           </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/9/2'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(2)}>
-            <div className="nine_number">02</div>
-            <div className="nine_menu_panel__link_title">
-              Sample2
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/9/3'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(3)}>
-            <div className="nine_number">03</div>
-            <div className="nine_menu_panel__link_title">
-              Sample3
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/3'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(4)}>
-            <div className="nine_number">04</div>
-            <div className="nine_menu_panel__link_title">
-              Menu3
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/4'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(5)}>
-            <div className="nine_number">05</div>
-            <div className="nine_menu_panel__link_title">
-              Menu4
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/5'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(6)}>
-            <div className="nine_number">06</div>
-            <div className="nine_menu_panel__link_title">
-              Menu5
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/6'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(7)}>
-            <div className="nine_number">07</div>
-            <div className="nine_menu_panel__link_title">
-              Menu6
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/6'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(8)}>
-            <div className="nine_number">08</div>
-            <div className="nine_menu_panel__link_title">
-              Menu7
-            </div>
-          </div>
-        </Link>
-        </div>
-
-        <div className="nine_menu_panel__container">
-        <Link
-          to='/menus/6'
-          className = 'nine_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(9)}>
-            <div className="nine_number">09</div>
-            <div className="nine_menu_panel__link_title">
-              Menu8
-            </div>
-          </div>
-        </Link>
-        </div>
-
+        ))}
       </div>
     )
   }

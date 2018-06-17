@@ -20,46 +20,28 @@ class MenuTextOne extends React.Component{
       }
     );
 
+    const menuValues = [
+      {text: 'Menu1', link: '/menus/1'},
+      {text: 'Menu2', link: '/menus/2'},
+      {text: 'Menu3', link: '/menus/3'},
+      {text: 'Menu4', link: '/menus/4'},
+      {text: 'Menu5', link: '/menus/5'},
+      {text: 'Menu6', link: '/menus/6'},
+    ]
+
     return(
-      <div
-        className = {menuClassName}
-      >
-      <div className="two_menu_panel__sect">
-        <Link
-          to='/'
-          className = 'two_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Home
-        </Link>
-      </div>
-      <div className="two_menu_panel__sect">
-        <Link
-          to='/menus/1'
-          className = 'two_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Menu one
-        </Link>
-      </div>
-      <div className="two_menu_panel__sect">
-        <Link
-          to='/menus/2'
-          className = 'two_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Menu two
-        </Link>
-      </div>
-      <div className="two_menu_panel__sect">
-        <Link
-          to='/menus/3'
-          className = 'two_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Menu Three
-        </Link>
-      </div>
+      <div className = {menuClassName}>
+        {menuValues.map((value, index)=>(
+          <div className="two_menu_panel__sect">
+            <Link
+              to={value.link}
+              className = 'two_menu_panel__link'
+              onClick = {this.toggleMenu}
+            >
+              {value.text}
+            </Link>
+          </div>
+        ))}
     </div>
     )
   }

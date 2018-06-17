@@ -21,40 +21,25 @@ class MenuTextFour extends React.Component{
       }
     );
 
+    const menuValues = [
+      {text: 'Menu1', link: '/menus/1'},
+      {text: 'Menu2', link: '/menus/2'},
+      {text: 'Menu3', link: '/menus/3'},
+    ]
     return(
-      <div
-        className = {menuClassName}
-      >
-        <div className="four_menu_panel__link_container">
+      <div className = {menuClassName}>
+        {menuValues.map((value, index)=>(
+         <div className="four_menu_panel__link_container">
           <div className="four_menu_panel__line"/>
           <Link
-            to='/'
+            to={value.link}
             className = 'four_menu_panel__link'
             onClick = {this.toggleMenu}
           >
-            Home
+            {value.text}
           </Link>
         </div>
-        <div className="four_menu_panel__link_container">
-          <div className="four_menu_panel__line"/>
-          <Link
-            to='/menus/1'
-            className = 'four_menu_panel__link'
-            onClick = {this.toggleMenu}
-          >
-            Menu one
-          </Link>
-        </div>
-        <div className="four_menu_panel__link_container">
-          <div className="four_menu_panel__line"/>
-          <Link
-            to='/menus/2'
-            className = 'four_menu_panel__link'
-            onClick = {this.toggleMenu}
-          >
-            Menu two
-          </Link>
-        </div>
+        ))}
       </div>
     )
   }

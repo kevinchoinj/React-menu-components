@@ -19,34 +19,24 @@ class MenuTextOne extends React.Component{
         'one_menu_panel__links--display': menuDisplay
       }
     );
-
+    const menuValues = [
+      {text: 'Menu1', link: '/menus/1'},
+      {text: 'Menu2', link: '/menus/2'},
+      {text: 'Menu3', link: '/menus/3'},
+    ]
     return(
-      <div
-        className = {menuClassName}
-      >
-        <Link
-          to='/'
-          className = 'one_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Home
-        </Link>
-        <br/>
-        <Link
-          to='/menus/1'
-          className = 'one_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Menu one
-        </Link>
-        <br/>
-        <Link
-          to='/menus/2'
-          className = 'one_menu_panel__link'
-          onClick = {this.toggleMenu}
-        >
-          Menu two
-        </Link>
+      <div className = {menuClassName}>
+        {menuValues.map((value, index)=>(
+          <div key={index}>
+            <Link
+              to={value.link}
+              className = 'one_menu_panel__link'
+              onClick = {this.toggleMenu}
+            >
+              {value.text}
+            </Link>
+          </div>
+        ))}
       </div>
     )
   }
