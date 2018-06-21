@@ -15,39 +15,32 @@ class MainMenuPanel extends React.Component{
         'main_menu_panel--display':mainMenuDisplay
       }
     );
+    const menuValues = [
+      {text: 'Home', link: '/'},
+      {text: 'Menu1', link: '/menus/1'},
+      {text: 'Menu2', link: '/menus/2'},
+      {text: 'Menu3', link: '/menus/3'},
+      {text: 'Menu4', link: '/menus/4'},
+      {text: 'Menu5', link: '/menus/5'},
+      {text: 'Menu6', link: '/menus/6'},
+      {text: 'Menu7', link: '/menus/7'},
+      {text: 'Menu8', link: '/menus/8'},
+      {text: 'Menu9', link: '/menus/9'},
+      {text: 'Menu10', link: '/menus/10'},
+      {text: 'Menu11', link: '/menus/11'},
 
+    ]
     return(
       <div className = {menuClassName}>
-      <Link to="/">
-        <div className="main_menu_section">Home</div>
-      </Link>
-      <Link to="/menus/1">
-        <div className="main_menu_section">Menu 1</div>
-      </Link>
-      <Link to="/menus/2">
-        <div className="main_menu_section">Menu 2</div>
-      </Link>
-      <Link to="/menus/3">
-        <div className="main_menu_section">Menu 3</div>
-      </Link>
-      <Link to="/menus/4">
-        <div className="main_menu_section">Menu 4</div>
-      </Link>
-      <Link to="/menus/5">
-        <div className="main_menu_section">Menu 5</div>
-      </Link>
-      <Link to="/menus/6">
-        <div className="main_menu_section">Menu 6</div>
-      </Link>
-      <Link to="/menus/7">
-        <div className="main_menu_section">Menu 7</div>
-      </Link>
-      <Link to="/menus/8">
-        <div className="main_menu_section">Menu 8</div>
-      </Link>
-      <Link to="/menus/9">
-        <div className="main_menu_section">Menu 9</div>
-      </Link>
+        {menuValues.map((value, index)=>(
+        <div key={index}>
+         <Link to={value.link}>
+            <div className="main_menu_section">
+              {value.text}
+            </div>
+          </Link>
+        </div>
+        ))}
       </div>
     )
   }

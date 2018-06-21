@@ -37,84 +37,61 @@ class MenuPanelThree extends React.Component{
       'three_menu_select--selected': this.props.currentPage==='menuFour',
     });
 
+    const menuValues = [
+      {text: 'HOME', link: '/', classValue: homeName},
+      {text: 'MENU ONE', link: '/menus/2', classValue: menuOneName},
+      {text: 'MENU TWO', link: '/menus/2', classValue: menuTwoName},
+      {text: 'MENU THREE', link: '/menus/3', classValue: menuThreeName},
+      {text: 'MENU FOUR', link: '/menus/4', classValue: menuFourName},
+    ]
+    const linkValues = [
+      {text: 'OUTLINK', link: 'https://google.com/'},
+      {text: 'OUTLINK TWO', link: 'https://google.com/'},
+    ]
 	  return(
         <div className={panelName}>
-        <Link to='/' className='three_menu_link' onClick={this.closeMenu}>
-          <div className={homeName}>
-            HOME
-            <div className='three_menu_indicator'></div>
+          {menuValues.map((value, index)=>(
+            <div key={index}>
+              <Link to={value.link} className='three_menu_link' onClick={this.closeMenu}>
+                <div className={value.classValue}>
+                  {value.text}
+                  <div className='three_menu_indicator'></div>
+                </div>
+              </Link>
+            </div>
+          ))}
+
+          {linkValues.map((value, index)=>(
+            <div key={index}>
+              <a
+                href={value.link}
+                target='_blank'
+                rel='noopener noreferrer'
+                className='three_menu_link'
+                onClick={this.props.toggler}
+              >
+                <div className='three_menu_outlink'>
+                  {value.text}&nbsp;<FontAwesome name="external-link-alt"/>
+                </div>
+              </a>
+            </div>
+          ))}
+          <br/><br/>
+          <a
+            href='https://twitter.com'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <FontAwesome name="twitter" className="three_menu_link"/>
+          </a>
+          <a
+            href='https://www.facebook.com/'
+          >
+            <FontAwesome name="facebook" className="three_menu_link"/>
+          </a>
+          <div className='three_menu_email'>
+            email@example.com
           </div>
-        </Link>
-
-        <Link to='/menus/1' className='three_menu_link' onClick={this.closeMenu}>
-          <div className={menuOneName}>
-            MENU ONE
-            <div className='three_menu_indicator'></div>
-          </div>
-        </Link>
-
-        <Link to='/menus/2' className='three_menu_link' onClick={this.closeMenu}>
-          <div className={menuTwoName}>
-            MENU TWO
-            <div className='three_menu_indicator'></div>
-          </div>
-        </Link>
-
-        <Link to='/menus/3' className='three_menu_link' onClick={this.closeMenu}>
-          <div className={menuThreeName}>
-            MENU THREE
-            <div className='three_menu_indicator'></div>
-          </div>
-        </Link>
-
-        <Link to='/menus/4' className='three_menu_link' onClick={this.closeMenu}>
-          <div className={menuFourName}>
-            MENU FOUR
-            <div className='three_menu_indicator'></div>
-          </div>
-        </Link>
-
-        <a
-          href='https://google.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='three_menu_link'
-          onClick={this.props.toggler}
-        >
-          <div className='three_menu_outlink'>
-            OUTLINK &nbsp;<FontAwesome name="external-link-alt"/>
-          </div>
-        </a>
-
-        <a
-          href='https://google.com/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='three_menu_link'
-          onClick={this.props.toggler}
-        >
-          <div className='three_menu_outlink'>
-            OUTLINK &nbsp;<FontAwesome name="external-link-alt"/>
-          </div>
-        </a>
-
-        <br/><br/>
-        <a
-          href='https://twitter.com'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          <FontAwesome name="twitter" className="three_menu_link"/>
-         </a>
-        <a
-          href='https://www.facebook.com/'
-        >
-          <FontAwesome name="facebook" className="three_menu_link"/>
-        </a>
-        <div className='three_menu_email'>
-          email@example.com
-        </div>
-
 				</div>
 
 	  );

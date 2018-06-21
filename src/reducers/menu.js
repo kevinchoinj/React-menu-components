@@ -3,6 +3,7 @@ import {
   SET_PAGE_NAME,
   TOGGLE_MAIN_MENU,
   HOVER_MENU_OPTION,
+  FIRST_MENU_CLICK,
 } from '../actions/menu'
 
 const DEFAULT_STATE={
@@ -10,6 +11,7 @@ const DEFAULT_STATE={
   currentPage: '',
   mainMenuDisplay: false,
   hoverOption: null,
+  firstMenuClicked: false,
 }
 
 export default(state=DEFAULT_STATE, payload)=>
@@ -23,6 +25,8 @@ export default(state=DEFAULT_STATE, payload)=>
       return state = {...state, mainMenuDisplay:payload.mainMenuDisplay};
     case HOVER_MENU_OPTION:
       return state = {...state, hoverOption:payload.hoverOption};
+    case FIRST_MENU_CLICK:
+      return state = {...state, firstMenuClicked:payload.firstMenuClicked};
     default:
       return state;
   }

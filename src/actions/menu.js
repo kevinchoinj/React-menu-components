@@ -2,6 +2,7 @@ export const TOGGLE_MENU = Symbol('TOGGLE_MENU');
 export const TOGGLE_MAIN_MENU = Symbol('TOGGLE_MAIN_MENU');
 export const SET_PAGE_NAME = Symbol('SET_PAGE_NAME');
 export const HOVER_MENU_OPTION = Symbol('HOVER_MENU_OPTION');
+export const FIRST_MENU_CLICK = Symbol('FIRST_MENU_CLICK');
 
 export const toggleMenu = (menuDisplay) => {
   return{
@@ -33,5 +34,12 @@ export const hoverMenuOption = (hoverOption) =>{
   return{
     type: HOVER_MENU_OPTION,
     hoverOption
+  };
+}
+
+export const firstMenuClick = (firstMenuClicked) =>{
+  return{
+    type: FIRST_MENU_CLICK,
+    firstMenuClicked
   };
 }

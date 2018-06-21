@@ -1,0 +1,245 @@
+.ten_menu_panel{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: -100vw;
+  background-color: #000;
+  -webkit-transition: .4s ease-out;
+  -moz-transition: .4s ease-out;
+  -o-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+.ten_menu_panel--display{
+  left:0px;
+  animation: TenMenuAppear .4s linear;
+  animation-fill-mode: both;
+  animation-delay: .1s
+}
+.ten_menu_panel--hidden{
+  left:-100vw;
+  animation: TenMenuDisappear .4s linear;
+  animation-fill-mode: both;
+  animation-delay: .1s
+}
+
+.ten_menu_background{
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  left: -100vw;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 100vw;
+  -webkit-transition: .4s ease-out;
+  -moz-transition: .4s ease-out;
+  -o-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+.ten_menu_background--display{
+  right:0px;
+  animation: TenBackgroundAppear .4s linear;
+  animation-fill-mode: both;
+}
+.ten_menu_background--hidden{
+  left:-100vw;
+  animation: TenMenuDisappear .4s linear;
+  animation-fill-mode: both;
+  animation-delay: .1s
+}
+
+@keyframes TenMenuAppear {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left:0px;
+  }
+}
+@keyframes TenMenuDisappear {
+  0% {
+    left: 0;
+  }
+  100% {
+    left:-100vw;
+  }
+}
+@keyframes TenBackgroundAppear {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left:0px;
+  }
+}
+
+.ten_menu_panel__links {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  right: 50%;
+  margin-left: 24px;
+  top: 25vh;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+}
+.ten_menu_panel__links--display {
+  pointer-events: auto;
+  animation: TenLinksAppear .4s linear;
+  animation-fill-mode: both;
+  animation-delay: .4s
+}
+.ten_menu_panel__links--hidden {
+  animation: TenLinksDisappear .4s linear;
+  animation-fill-mode: both;
+  animation-delay: .4s
+}
+@keyframes TenLinksDisappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes TenLinksAppear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ten_menu_panel__link_container {
+  /*margin-bottom: 48px;*/
+  display: flex;
+}
+
+.ten_menu_panel__link_container:hover .ten_menu_panel__line {
+  width: 48px;
+}
+
+
+.ten_menu_panel__line {
+  width: 35px;
+  margin-top:14px;
+  border-top: 2px solid #fff;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+}
+.ten_menu_panel__link {
+  padding-left: 28px;
+  padding-right: 28px;
+  line-height: 129px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
+.ten_menu_btn{
+  position: fixed;
+  mix-blend-mode:  difference;
+  top: 0px;
+  right: 10px;
+  width: 60px;
+  height: 70px;
+  cursor: pointer;
+  will-change: opacity;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  z-index: 5;
+}
+.ten_menu_btn__container{
+  background: transparent;
+  color: #000;
+}
+.ten_menu_line1{
+  background-color: #fff;
+  height: 3px;
+  width: 24px;
+  position: absolute;
+  left: 18px;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+
+  top: 29px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.ten_menu_line1--display{
+  top: 34px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.ten_menu_line2{
+  background-color: #fff;
+  height: 3px;
+  width: 24px;
+  position: absolute;
+  left: 18px;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+	top: 38px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.ten_menu_line2--display{
+  top: 34px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ten_menu_line3{
+  background-color: #fff;
+  height: 3px;
+  width: 14px;
+  position: absolute;
+  left: 18px;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+
+  top: 47px;
+}
+.ten_menu_line3--display{
+  width: 0px;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .ten_menu_panel {
+    width: 100vw;
+    right: -100vw;
+  }
+  .ten_menu_panel--display{
+    right:0px;
+  }
+}

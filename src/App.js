@@ -3,15 +3,17 @@ import {Switch, Route} from 'react-router-dom';
 
 import './App.css';
 
-import './styles/menuone.css';
-import './styles/menutwo.css';
-import './styles/menuthree.css';
-import './styles/menufour.css';
-import './styles/menufive.css';
-import './styles/menusix.css';
-import './styles/menuseven.css';
-import './styles/menueight.css';
-import './styles/menunine.css';
+import './styles/menu1.css';
+import './styles/menu2.css';
+import './styles/menu3.css';
+import './styles/menu4.css';
+import './styles/menu5.css';
+import './styles/menu6.css';
+import './styles/menu7.css';
+import './styles/menu8.css';
+import './styles/menu9.css';
+import './styles/menu10.css';
+import './styles/menu11.css';
 
 import './index.css';
 import Home from './pages/Home';
@@ -19,15 +21,17 @@ import Home from './pages/Home';
 import './styles/mainmenu.css';
 import MainMenuWrap from './components/main/MainMenuWrap';
 
-import MenuPageOne from './pages/MenuPageOne';
-import MenuPageTwo from './pages/MenuPageTwo';
-import MenuPageThree from './pages/MenuPageThree';
-import MenuPageFour from './pages/MenuPageFour';
-import MenuPageFive from './pages/MenuPageFive';
-import MenuPageSix from './pages/MenuPageSix';
-import MenuPageSeven from './pages/MenuPageSeven';
-import MenuPageEight from './pages/MenuPageEight';
-import MenuPageNine from './pages/MenuPageNine';
+import MenuPageOne from './pages/MenuPage1';
+import MenuPageTwo from './pages/MenuPage2';
+import MenuPageThree from './pages/MenuPage3';
+import MenuPageFour from './pages/MenuPage4';
+import MenuPageFive from './pages/MenuPage5';
+import MenuPageSix from './pages/MenuPage6';
+import MenuPageSeven from './pages/MenuPage7';
+import MenuPageEight from './pages/MenuPage8';
+import MenuPageNine from './pages/MenuPage9';
+import MenuPageTen from './pages/MenuPage10';
+import MenuPageEleven from './pages/MenuPage11';
 
 class App extends Component {
   render() {
@@ -91,6 +95,18 @@ class App extends Component {
             path="/menus/9"
             render={(props) =>
               <MenuPageNine {...props} />
+            }
+          />
+          <Route
+            path="/menus/10"
+            render={(props) =>
+              <MenuPageTen {...props} />
+            }
+          />
+          <Route
+            path="/menus/11"
+            render={(props) =>
+              <MenuPageEleven {...props} />
             }
           />
 
