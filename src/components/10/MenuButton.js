@@ -7,6 +7,7 @@ import * as menuActions from '../../actions/menu';
 class MenuButton extends React.Component{
 	toggleMenu = () => {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
+    this.props.menuActions.firstMenuClick(true);
   }
   render(){
     const {

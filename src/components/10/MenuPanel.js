@@ -8,18 +8,21 @@ class MenuPanel extends React.Component{
   render(){
     const {
       menuDisplay,
+      firstMenuClicked,
     } = this.props;
 
     const backgroundClassName = classNames(
       'ten_menu_background',
       {
-        'ten_menu_background--display':menuDisplay
+        'ten_menu_background--hidden': (menuDisplay===false) && (firstMenuClicked),
+        'ten_menu_background--display':menuDisplay,
       }
     );
 
     const menuClassName = classNames(
       'ten_menu_panel',
       {
+        'ten_menu_panel--hidden': (menuDisplay===false) && (firstMenuClicked),
         'ten_menu_panel--display':menuDisplay
       }
     );
@@ -43,6 +46,7 @@ class MenuPanel extends React.Component{
 export default connect(
   (state, ownProps) => ({
     menuDisplay:state.menu.menuDisplay,
+    firstMenuClicked: state.menu.firstMenuClicked,
   }),
   dispatch => ({
   }),

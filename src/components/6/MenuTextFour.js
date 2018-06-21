@@ -29,7 +29,7 @@ class MenuTextFour extends React.Component{
     return(
       <div className = {menuClassName}>
         {menuValues.map((value, index)=>(
-         <div className="four_menu_panel__link_container">
+         <div key={index}className="four_menu_panel__link_container">
           <div className="four_menu_panel__line"/>
           <Link
             to={value.link}

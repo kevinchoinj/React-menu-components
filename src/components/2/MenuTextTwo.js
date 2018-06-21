@@ -32,7 +32,7 @@ class MenuTextOne extends React.Component{
     return(
       <div className = {menuClassName}>
         {menuValues.map((value, index)=>(
-          <div className="two_menu_panel__sect">
+          <div key={index} className="two_menu_panel__sect">
             <Link
               to={value.link}
               className = 'two_menu_panel__link'
