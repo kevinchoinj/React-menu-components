@@ -1,54 +1,48 @@
 .eleven_menu_panel{
-  height: 100vh;
-  width: 66vw;
-  position: fixed;
-  right: -66vw;
-  background-color: #000;
-  -webkit-transition: .4s ease-out;
-  -moz-transition: .4s ease-out;
-  -o-transition: .4s ease-out;
-  transition: .4s ease-out;
+height:55vh;
+width: 100vw;
+position: fixed;
+top: -55vh;
+background-color: #000;
 }
 .eleven_menu_panel--display{
-  right:0px;
+  animation: ElevenMenuAppear .6s ease-out;
+  animation-fill-mode: both;
 }
 
-.eleven_menu_background{
-  height: 100vh;
-  width: 100vw;
-  position: fixed;
-  right: -100vw;
-  background-color: #000;
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 100vw;
-  -webkit-transition: .4s ease-out;
-  -moz-transition: .4s ease-out;
-  -o-transition: .4s ease-out;
-  transition: .4s ease-out;
+.eleven_menu_panel--hidden {
+  animation: ElevenMenuDisappear .4s ease-out;
+  animation-fill-mode: both;
 }
-.eleven_menu_background--display{
-  right:0px;
+
+@keyframes ElevenMenuAppear {
+  0% {
+    transform: translateY(0vh);
+  }
+  40% {
+    transform: translateY(55vh);
+  }
+ 100% {
+    transform: translateY(50vh);
+  }
+}
+@keyframes ElevenMenuDisappear {
+  0% {
+    transform: translateY(50vh);
+  }
+ 100% {
+    transform: translateY(0vh);
+  }
 }
 
 .eleven_menu_panel__links{
   position: absolute;
-  bottom: 80px;
-  top: 25vh;
-
-  -webkit-transition: 1s ease-out;
-  -moz-transition: 1s ease-out;
-  -o-transition: 1s ease-out;
-  transition: 1s ease-out;
+  bottom: 0px;
+  display: flex;
   z-index: 4;
-  transform: translateX(50vw);
-  opacity: 0;
-  pointer-events: none;
 }
 .eleven_menu_panel__links--display{
-  opacity: 1;
-  transform: translateX(0px);
-  pointer-events: auto;
+
 
 }
 .eleven_menu_panel__link {
