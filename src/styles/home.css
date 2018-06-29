@@ -1,0 +1,19 @@
+.home_image {
+  height: 100%;
+  border: 1px solid #000;
+}
+.home_image__container {
+  height: 300px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 14px;
+  padding-top: 14px;
+}
+.home_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.home_title {
+  margin-bottom: 14px;
+}

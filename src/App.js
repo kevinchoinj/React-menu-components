@@ -15,6 +15,7 @@ import './styles/menu9.css';
 import './styles/menu10.css';
 import './styles/menu11.css';
 import './styles/menu12.css';
+import './styles/home.css';
 
 import './index.css';
 import Home from './pages/Home';
