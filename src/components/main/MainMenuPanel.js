@@ -28,7 +28,12 @@ class MainMenuPanel extends React.Component{
       {text: 'Menu9', link: '/menus/9'},
       {text: 'Menu10', link: '/menus/10'},
       {text: 'Menu11', link: '/menus/11'},
-
+      {text: 'Menu12', link: '/menus/12'},
+      {text: 'Menu13', link: '/menus/13'},
+      {text: 'Menu14', link: '/menus/14'},
+      {text: 'Menu15', link: '/menus/15'},
+      {text: 'Menu16', link: '/menus/16'},
+      {text: 'Menu17', link: '/menus/17'},
     ]
     return(
       <div className = {menuClassName}>

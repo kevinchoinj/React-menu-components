@@ -9,6 +9,8 @@
   -o-transition: .4s ease-out;
   transition: .4s ease-out;
   z-index: 999;
+  max-height: calc(100vh - 28px);
+  overflow: auto;
 }
 .main_menu_panel--display{
   bottom: 28px;
