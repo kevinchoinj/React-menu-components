@@ -11,6 +11,7 @@ import img9 from '../media/home9.jpg';
 import img10 from '../media/home10.jpg';
 import img11 from '../media/home11.jpg';
 import img12 from '../media/home12.jpg';
+import img13 from '../media/home13.jpg';
 import {Link} from 'react-router-dom';
 
 class Home extends React.Component{
@@ -27,7 +28,8 @@ class Home extends React.Component{
       {text: 'Page9', link: '/menus/9', imageSrc: img9},
       {text: 'Page10', link: '/menus/10', imageSrc: img10},
 			{text: 'Page11', link: '/menus/11', imageSrc: img11},
-			{text: 'Page12', link: '/menus/12', imageSrc: img12},
+      {text: 'Page12', link: '/menus/12', imageSrc: img12},
+      {text: 'Page13', link: '/menus/13', imageSrc: img13},
     ]
 	  return(
 			<div className="home_wrapper">

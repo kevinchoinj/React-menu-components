@@ -10,7 +10,7 @@
   transition: .4s ease-out;
 }
 .eight_menu_panel--display{
-  right:0px;
+  transform: translateX( -66vw);
 }
 
 .eight_menu_background{
@@ -28,14 +28,12 @@
   transition: .4s ease-out;
 }
 .eight_menu_background--display{
-  right:0px;
+  transform: translateX( -100vw);
 }
 
 .eight_menu_panel__links{
   position: absolute;
-  bottom: 80px;
   top: 25vh;
-
   -webkit-transition: 1s ease-out;
   -moz-transition: 1s ease-out;
   -o-transition: 1s ease-out;
