@@ -12,15 +12,27 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
+  pointer-events: none;
 }
 .twelve_menu_panel--display {
   opacity: 1;
   transform: scale(1,1);
+  pointer-events: auto;
 }
 .twelve_menu_panel_overlay {
   background-color: rgba(0, 0, 0, .5);
   height: 100vh;
   width: 100vw;
+}
+.twelve_menu_panel__links_wrapper {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events:none;
+}
+.twelve_menu_panel__links_wrapper--display {
+  pointer-events:auto;
 }
 .twelve_menu_panel__links {
   width: 100%;
@@ -34,9 +46,11 @@
   transition:.25s ease-out;
   opacity: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 .twelve_menu_panel__links--display {
   opacity: 1;
+  pointer-events: auto;
 }
 .twelve_menu_panel__sect {
   display: flex;

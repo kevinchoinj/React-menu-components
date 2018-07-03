@@ -19,6 +19,12 @@ class MenuText extends React.Component{
         'twelve_menu_panel__links--display': menuDisplay
       }
     );
+    const wrapperName = classNames(
+      'twelve_menu_panel__links_wrapper',
+      {
+        'twelve_menu_panel__links_wrapper--display': menuDisplay
+      }
+    );
 
     const menuValues = [
       {text: 'Menu1', link: '/menus/1'},
@@ -29,19 +35,21 @@ class MenuText extends React.Component{
     ]
 
     return(
-      <div className = {menuClassName}>
-        {menuValues.map((value, index)=>(
-          <div key={index} className="twelve_menu_panel__sect">
-            <Link
-              to={value.link}
-              className = 'twelve_menu_panel__link'
-              onClick = {this.toggleMenu}
-            >
-              {value.text}
-            </Link>
+      <div className={wrapperName}>
+        <div className = {menuClassName}>
+          {menuValues.map((value, index)=>(
+            <div key={index} className="twelve_menu_panel__sect">
+              <Link
+                to={value.link}
+                className = 'twelve_menu_panel__link'
+                onClick = {this.toggleMenu}
+              >
+                {value.text}
+              </Link>
 
-          </div>
-        ))}
+            </div>
+          ))}
+      </div>
     </div>
     )
   }
