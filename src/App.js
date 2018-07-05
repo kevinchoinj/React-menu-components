@@ -17,6 +17,7 @@ import './styles/menu11.css';
 import './styles/menu12.css';
 import './styles/menu13.css';
 import './styles/menu14.css';
+import './styles/menu15.css';
 import './styles/home.css';
 
 import './index.css';
@@ -39,6 +40,7 @@ import MenuPageEleven from './pages/MenuPage11';
 import MenuPageTwelve from './pages/MenuPage12';
 import MenuPageThirteen from './pages/MenuPage13';
 import MenuPageFourteen from './pages/MenuPage14';
+import MenuPageFifteen from './pages/MenuPage15';
 
 class App extends Component {
   render() {
@@ -132,6 +134,12 @@ class App extends Component {
             path="/menus/14"
             render={(props) =>
               <MenuPageFourteen {...props} />
+            }
+          />
+          <Route
+            path="/menus/15"
+            render={(props) =>
+              <MenuPageFifteen {...props} />
             }
           />
         </Switch>

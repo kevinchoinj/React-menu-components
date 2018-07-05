@@ -11,9 +11,9 @@ class MenuBar extends React.Component{
       scrolledPage,
     } = this.props;
     const menuBarName= classNames(
-      'fourteen_menu_bar',
+      'fifteen_menu_bar',
       {
-        'fourteen_menu_bar--scrolled': scrolledPage,
+        'fifteen_menu_bar--scrolled': scrolledPage,
       }
     );
 	  return(
