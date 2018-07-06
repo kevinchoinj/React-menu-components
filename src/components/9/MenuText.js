@@ -45,7 +45,10 @@ class MenuText extends React.Component{
               className = 'nine_menu_panel__link'
               onClick = {this.toggleMenu}
             >
-              <div className = 'nine_menu_panel__link_div' onMouseEnter={()=>this.hoverOption(value.pageName)}>
+              <div
+                className = 'nine_menu_panel__link_div'
+                onMouseEnter={()=>this.hoverOption(value.pageName)}
+              >
                 <div className="nine_number">{value.value}</div>
                   <div className="nine_menu_panel__link_title">
                     {value.text}

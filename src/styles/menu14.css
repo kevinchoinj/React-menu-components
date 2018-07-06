@@ -44,7 +44,7 @@
   position: absolute;
   width: 150px;
   color: #fff;
-  height: 0px;
+  max-height: 0px;
   overflow: hidden;
   -webkit-transition: .25s ease-out;
   -moz-transition: .25s ease-out;
@@ -53,7 +53,7 @@
   padding: 0px 14px;
 }
 .fourteen_submenu_panel--display {
-  height: 200px;
+  max-height: 200px;
   padding: 7px 14px;
 }
 .fourteen_menu_title {

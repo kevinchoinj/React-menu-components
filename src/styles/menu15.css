@@ -44,8 +44,9 @@
   position: absolute;
   width: 100vw;
   color: #fff;
-  height: 0px;
+  height: 200px;
   overflow: hidden;
+  opacity: 0;
   left: 0px;
   -webkit-transition: .25s ease-out;
   -moz-transition: .25s ease-out;
@@ -54,7 +55,7 @@
   padding: 0px 14px;
 }
 .fifteen_submenu_panel--display {
-  height: 200px;
+  opacity: 1;
 }
 
 .fifteen_menu_title {
