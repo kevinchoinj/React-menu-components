@@ -1,3 +1,6 @@
+/*======================================
+=              MENU PANEL              =
+======================================*/
 .nine_page_wrapper {
   height: 100vh;
   width: 100vw;
@@ -35,11 +38,9 @@
   z-index: 3;
   -webkit-overflow-scrolling: touch;
 }
-
 .nine_menu_panel__left--display{
   left: 0px;
 }
-
 .nine_indicator {
   font-size: 24px;
   color: #aaa;
@@ -74,15 +75,12 @@
 }
 .nine_menu_background:hover {
 }
-
 .nine_menu_background__home {
   position:absolute;
-
   min-width: 100%;
   min-height: 100%;
   width: auto;
   height: auto;
-
   background-size: cover;
   opacity: 0;
   filter: brightness(70%);
@@ -93,6 +91,46 @@
 .nine_menu_background__home:hover {
   filter: brightness(100%)
 }
+
+@media screen and (max-width: 1590px) {
+  .nine_menu_panel__left {
+    left: -50vw;
+    width: 50vw;
+  }
+  .nine_menu_panel__left--display {
+    left: 0px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .nine_menu_panel__left {
+    left: -100vw;
+    width: 100vw;
+    min-width: 0px;
+  }
+  .nine_menu_panel__left--display {
+    left: 0px;
+  }
+  .nine_menu_panel__right {
+    display: none;
+  }
+  .nine_menu_background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nine_menu_panel {
+    width: 100vw;
+    right: -100vw;
+  }
+  .nine_menu_panel--display{
+    right:0px;
+  }
+}
+
+/*======================================
+=              MENU LINKS              =
+======================================*/
 .nine_menu_panel__links{
   -webkit-transition: 1s ease-out;
   -moz-transition: 1s ease-out;
@@ -150,13 +188,11 @@
   animation-delay: .65s
 }
 
-
 @keyframes NineFadeIn {
   0% {
     transform: translate(0, 20px);
     opacity: 0;
   }
-
   85% {
     opacity: 1;
   }
@@ -203,103 +239,98 @@
 .nine_menu_panel__link_title {
   margin-left: 14px;
 }
-.nine_menu_btn{
+@media screen and (max-width: 1590px) {
+  .nine_menu_panel__link {
+    width: 50vw;
+  }
+  .nine_menu_panel__links {
+    width: calc(50vw + 20px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .nine_menu_panel__link {
+    width: 100vw;
+    min-width: 0px;
+  }
+  .nine_menu_panel__links {
+    width: 100vw;
+  }
+  .nine_indicator {
+    display: none;
+  }
+}
+
+/*======================================
+=              MENU BUTTON             =
+======================================*/
+.nine_menu_button{
   position: fixed;
   mix-blend-mode:  difference;
-  will-change: opacity;
   top: 0px;
   right: 10px;
   width: 60px;
   height: 70px;
   cursor: pointer;
+  will-change: opacity;
   -webkit-transition: .25s ease-out;
   -moz-transition: .25s ease-out;
   -o-transition: .25s ease-out;
   transition: .25s ease-out;
-  z-index: 5;
+  z-index: 10;
   pointer-events: auto;
 }
-.nine_menu_btn__container{
+.nine_menu_button__container{
   background: transparent;
   color: #000;
 }
-.nine_menu_line1{
+.nine_menu_button__line {
   background-color: #fff;
   height: 3px;
-  width: 24px;
   position: absolute;
   left: 18px;
   -webkit-transition: .25s ease-out;
   -moz-transition: .25s ease-out;
   -o-transition: .25s ease-out;
   transition:.25s ease-out;
-
-  top: 29px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-.nine_menu_line1--display{
+.nine_menu_button__line:nth-child(1) {
+  width: 24px;
+  top: 29px;
+}
+.nine_menu_button__line:nth-child(2) {
+  width: 24px;
+  top: 38px;
+}
+.nine_menu_button__line:nth-child(3) {
+  width: 14px;
+  top: 47px;
+}
+.nine_menu_button__container--displayed .nine_menu_button__line:nth-child(1) {
   top: 34px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.nine_menu_line2{
-  background-color: #fff;
-  height: 3px;
-  width: 24px;
-  position: absolute;
-  left: 18px;
-  -webkit-transition: .25s ease-out;
-  -moz-transition: .25s ease-out;
-  -o-transition: .25s ease-out;
-  transition:.25s ease-out;
-	top: 38px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-.nine_menu_line2--display{
+.nine_menu_button__container--displayed .nine_menu_button__line:nth-child(2) {
   top: 34px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.nine_menu_line3{
-  background-color: #fff;
-  height: 3px;
-  width: 14px;
-  position: absolute;
-  left: 18px;
-  -webkit-transition: .25s ease-out;
-  -moz-transition: .25s ease-out;
-  -o-transition: .25s ease-out;
-  transition:.25s ease-out;
-
-  top: 47px;
-}
-.nine_menu_line3--display{
+.nine_menu_button__container--displayed .nine_menu_button__line:nth-child(3) {
   width: 0px;
 }
 
 
-
-
-@media screen and (max-width: 768px) {
-  .nine_menu_panel {
-    width: 100vw;
-    right: -100vw;
-  }
-  .nine_menu_panel--display{
-    right:0px;
-  }
-}
-
+/*======================================
+=               MENU MISC              =
+======================================*/
 .nine_sample_header {
   position: absolute;
   width: 100vw;
@@ -364,50 +395,6 @@
   font-size: 16px;
   color: #616161;
 }
-@media screen and (max-width: 1590px) {
-  .nine_menu_panel__left {
-    left: -50vw;
-    width: 50vw;
-  }
-  .nine_menu_panel__link {
-    width: 50vw;
-  }
-  .nine_menu_panel__left--display {
-    left: 0px;
-  }
-  .nine_menu_panel__links {
-    width: calc(50vw + 20px);
-  }
-
-
-}
-@media screen and (max-width: 992px) {
-  .nine_menu_panel__left {
-    left: -100vw;
-    width: 100vw;
-    min-width: 0px;
-  }
-  .nine_menu_panel__link {
-    width: 100vw;
-    min-width: 0px;
-  }
-  .nine_menu_panel__left--display {
-    left: 0px;
-  }
-  .nine_menu_panel__links {
-    width: 100vw;
-  }
-  .nine_menu_panel__right {
-    display: none;
-  }
-  .nine_menu_background {
-    display: none;
-  }
-  .nine_indicator {
-    display: none;
-  }
-}
-
 .nine_menu_top_right {
   padding: 50px;
   color: #fff;

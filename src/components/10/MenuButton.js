@@ -7,51 +7,25 @@ import * as menuActions from '../../actions/menu';
 class MenuButton extends React.Component{
 	toggleMenu = () => {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
-    this.props.menuActions.firstMenuClick(true);
   }
   render(){
     const {
       menuDisplay,
     } = this.props;
 
-    const menuLine1Names= classNames(
-      'ten_menu_line1',
-      {
-        'ten_menu_line1--display':menuDisplay,
-      }
-    );
-    const menuLine2Names= classNames(
-      'ten_menu_line2',
-      {
-        'ten_menu_line2--display':menuDisplay,
-      }
-    );
-    const menuLine3Names= classNames(
-      'ten_menu_line3',
-      {
-        'ten_menu_line3--display':menuDisplay,
-      }
-    );
+    const buttonName = classNames({
+      'ten_menu_button__container': true,
+      'ten_menu_button__container--displayed': menuDisplay,
+    });
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = 'ten_menu_btn'
+        className = "ten_menu_button"
       >
-        <div
-          className = 'ten_menu_btn__container'
-        >
-          <span
-            className = {menuLine1Names}
-          >
-          </span>
-          <span
-            className = {menuLine2Names}
-          >
-          </span>
-          <span
-            className = {menuLine3Names}
-          >
-          </span>
+        <div className = {buttonName}>
+          <span className = "ten_menu_button__line"/>
+          <span className = "ten_menu_button__line"/>
+          <span className = "ten_menu_button__line"/>
         </div>
 			</div>
 		)

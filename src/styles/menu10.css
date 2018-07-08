@@ -1,3 +1,6 @@
+/*======================================
+=              MENU PANEL              =
+======================================*/
 .ten_menu_panel{
   height: 100vh;
   width: 100vw;
@@ -17,12 +20,10 @@
 }
 .ten_menu_panel--hidden{
   left:-100vw;
-
   animation: TenMenuDisappear .4s linear;
   animation-fill-mode: both;
   animation-delay: .4s
 }
-
 .ten_menu_background{
   height: 100vh;
   width: 100vw;
@@ -74,6 +75,18 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .ten_menu_panel {
+    width: 100vw;
+    right: -100vw;
+  }
+  .ten_menu_panel--display{
+    right:0px;
+  }
+}
+/*======================================
+=              MENU LINKS              =
+======================================*/
 .ten_menu_panel__links {
   pointer-events: none;
   position: fixed;
@@ -127,7 +140,6 @@
 .ten_menu_panel__links--display .ten_menu_panel__link_container:nth-child(5) {
   animation-delay: .7s
 }
-
 .ten_menu_panel__links--hidden .ten_menu_panel__link_container {
   opacity: 1;
   animation: TenLinksDisappear .4s linear;
@@ -148,12 +160,10 @@
 .ten_menu_panel__links--hidden .ten_menu_panel__link_container:nth-child(5) {
   animation-delay: .0s
 }
-
 .ten_menu_panel__link_container {
   /*margin-bottom: 48px;*/
   display: flex;
 }
-
 .ten_menu_panel__link {
   padding-left: 28px;
   padding-right: 28px;
@@ -173,7 +183,10 @@
   color: #555;
 }
 
-.ten_menu_btn{
+/*======================================
+=              MENU BUTTON             =
+======================================*/
+.ten_menu_button{
   position: fixed;
   mix-blend-mode:  difference;
   top: 0px;
@@ -188,83 +201,50 @@
   transition: .25s ease-out;
   z-index: 5;
 }
-.ten_menu_btn__container{
+.ten_menu_button__container{
   background: transparent;
   color: #000;
 }
-.ten_menu_line1{
+.ten_menu_button__line {
   background-color: #fff;
   height: 3px;
-  width: 24px;
   position: absolute;
   left: 18px;
   -webkit-transition: .25s ease-out;
   -moz-transition: .25s ease-out;
   -o-transition: .25s ease-out;
   transition:.25s ease-out;
-
-  top: 29px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-.ten_menu_line1--display{
+.ten_menu_button__line:nth-child(1) {
+  width: 24px;
+  top: 29px;
+}
+.ten_menu_button__line:nth-child(2) {
+  width: 24px;
+  top: 38px;
+}
+.ten_menu_button__line:nth-child(3) {
+  width: 14px;
+  top: 47px;
+}
+.ten_menu_button__container--displayed .ten_menu_button__line:nth-child(1) {
   top: 34px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.ten_menu_line2{
-  background-color: #fff;
-  height: 3px;
-  width: 24px;
-  position: absolute;
-  left: 18px;
-  -webkit-transition: .25s ease-out;
-  -moz-transition: .25s ease-out;
-  -o-transition: .25s ease-out;
-  transition:.25s ease-out;
-	top: 38px;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-}
-.ten_menu_line2--display{
+.ten_menu_button__container--displayed .ten_menu_button__line:nth-child(2) {
   top: 34px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.ten_menu_line3{
-  background-color: #fff;
-  height: 3px;
-  width: 14px;
-  position: absolute;
-  left: 18px;
-  -webkit-transition: .25s ease-out;
-  -moz-transition: .25s ease-out;
-  -o-transition: .25s ease-out;
-  transition:.25s ease-out;
-
-  top: 47px;
-}
-.ten_menu_line3--display{
+.ten_menu_button__container--displayed .ten_menu_button__line:nth-child(3) {
   width: 0px;
-}
-
-
-
-
-@media screen and (max-width: 768px) {
-  .ten_menu_panel {
-    width: 100vw;
-    right: -100vw;
-  }
-  .ten_menu_panel--display{
-    right:0px;
-  }
 }

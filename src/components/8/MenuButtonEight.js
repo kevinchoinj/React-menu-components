@@ -4,7 +4,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as menuActions from '../../actions/menu';
 
-class MenuButtonEight extends React.Component{
+class MenuButton extends React.Component{
 	toggleMenu = () => {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
@@ -13,44 +13,19 @@ class MenuButtonEight extends React.Component{
       menuDisplay,
     } = this.props;
 
-    const menuLine1Names= classNames(
-      'eight_menu_line1',
-      {
-        'eight_menu_line1--display':menuDisplay,
-      }
-    );
-    const menuLine2Names= classNames(
-      'eight_menu_line2',
-      {
-        'eight_menu_line2--display':menuDisplay,
-      }
-    );
-    const menuLine3Names= classNames(
-      'eight_menu_line3',
-      {
-        'eight_menu_line3--display':menuDisplay,
-      }
-    );
+    const buttonName = classNames({
+      'eight_menu_button__container': true,
+      'eight_menu_button__container--displayed': menuDisplay,
+    });
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = 'eight_menu_btn'
+        className = "eight_menu_button"
       >
-        <div
-          className = 'eight_menu_btn__container'
-        >
-          <span
-            className = {menuLine1Names}
-          >
-          </span>
-          <span
-            className = {menuLine2Names}
-          >
-          </span>
-          <span
-            className = {menuLine3Names}
-          >
-          </span>
+        <div className = {buttonName}>
+          <span className = "eight_menu_button__line"/>
+          <span className = "eight_menu_button__line"/>
+          <span className = "eight_menu_button__line"/>
         </div>
 			</div>
 		)
@@ -64,4 +39,4 @@ export default connect(
   dispatch => ({
     menuActions: bindActionCreators(menuActions, dispatch),
   }),
-)(MenuButtonEight);
+)(MenuButton);

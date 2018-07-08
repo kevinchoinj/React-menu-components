@@ -1,3 +1,6 @@
+/*======================================
+=              MENU PANEL              =
+======================================*/
 .four_menu_background {
   height: 100vh;
   width: 100vw;
@@ -16,9 +19,7 @@
   animation: TurnGrey .4s linear;
   animation-fill-mode: both;
   background-repeat: no-repeat;
-
 }
-
 @keyframes TurnBlue {
   0% {
   }
@@ -41,7 +42,57 @@
   100% {
   }
 }
+.four_menu_panel__animation_show {
+  height: 1px;
+  width: 1px;
+  right: 0px;
+  top: 0px;
+  border-radius: 1px;
+  position: fixed;
+  background-color: #1a52d3;
+}
+.four_menu_panel__animation_show--display {
+  animation: FourCircleExpand .4s linear;
+  animation-fill-mode: both;
+}
+.four_menu_panel__animation_hide {
+  height: 1px;
+  width: 1px;
+  right: 0px;
+  top: 0px;
+  border-radius: 1px;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 100vw;
+}
+.four_menu_panel__animation_hide--display {
+  animation: FourCircleExpand .4s linear;
+  animation-fill-mode: both;
+}
+@keyframes FourCircleExpand {
+  0% {
+    height: 1px;
+    width: 1px;
+    border-radius: 1px;
+  }
+  85% {
+    height: 100vw;
+    width: 100vw;
+    border-bottom-left-radius: 100vw;
+  }
+  99% {
+    height: 100vw;
+    width: 100vw;
+    border-radius: 0px;
+  }
+  100% {
+  }
+}
 
+/*======================================
+=              MENU LINKS              =
+======================================*/
 .four_menu_panel__links {
   opacity: 0;
   pointer-events: none;
@@ -82,16 +133,12 @@
     opacity: 1;
   }
 }
-
 .four_menu_panel__link_container {
-  /*margin-bottom: 48px;*/
   display: flex;
 }
-
 .four_menu_panel__link_container:hover .four_menu_panel__line {
   width: 48px;
 }
-
 .four_menu_panel__line {
   width: 35px;
   margin-top:14px;
@@ -113,66 +160,68 @@
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
-.four_menu_panel__animation_show {
-  height: 1px;
-  width: 1px;
-  right: 0px;
-  top: 0px;
-  border-radius: 1px;
+/*======================================
+=              MENU BUTTON             =
+======================================*/
+.four_menu_button{
   position: fixed;
-  background-color: #1a52d3;
-
-}
-.four_menu_panel__animation_show--display {
-  animation: CircleExpand .4s linear;
-  animation-fill-mode: both;
-}
-
-.four_menu_panel__animation_hide {
-  height: 1px;
-  width: 1px;
-  right: 0px;
+  mix-blend-mode:  difference;
   top: 0px;
-  border-radius: 1px;
-  position: fixed;
-  background-repeat: no-repeat;
-  background-position: right top;
-  background-size: 100vw;
-
+  right: 10px;
+  width: 60px;
+  height: 70px;
+  cursor: pointer;
+  will-change: opacity;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  z-index: 5;
 }
-.four_menu_panel__animation_hide--display {
-  animation: CircleExpand .4s linear;
-  animation-fill-mode: both;
+.four_menu_button__container{
+  background: transparent;
+  color: #000;
 }
-@keyframes AppearAtEnd {
-  0% {
-    opacity: 0;
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.four_menu_button__line {
+  background-color: #fff;
+  height: 3px;
+  position: absolute;
+  left: 18px;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
-
-@keyframes CircleExpand {
-  0% {
-    height: 1px;
-    width: 1px;
-    border-radius: 1px;
-  }
-  85% {
-    height: 100vw;
-    width: 100vw;
-    border-bottom-left-radius: 100vw;
-  }
-  99% {
-    height: 100vw;
-    width: 100vw;
-    border-radius: 0px;
-  }
-  100% {
-
-  }
+.four_menu_button__line:nth-child(1) {
+  width: 24px;
+  top: 29px;
+}
+.four_menu_button__line:nth-child(2) {
+  width: 24px;
+  top: 38px;
+}
+.four_menu_button__line:nth-child(3) {
+  width: 14px;
+  top: 47px;
+}
+.four_menu_button__container--displayed .four_menu_button__line:nth-child(1) {
+  top: 34px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.four_menu_button__container--displayed .four_menu_button__line:nth-child(2) {
+  top: 34px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.four_menu_button__container--displayed .four_menu_button__line:nth-child(3) {
+  width: 0px;
 }

@@ -1,4 +1,7 @@
-.seventeen_menu_panel{
+/*======================================
+=              MENU PANEL              =
+======================================*/
+.seventeen_menu_panel {
   position: absolute;
 	width: 100vw;
 	top: 0px;
@@ -15,10 +18,8 @@
 	-webkit-transition: all 1s ease;
 	-o-transition: all 1s ease;
   transition: all 1s ease;
-
-  }
-.seventeen_menu_panel:before
-{
+}
+.seventeen_menu_panel:before {
 	content: '';
 	width: 120%;
 	height: 100%;
@@ -31,206 +32,194 @@
 	-o-transition: all 1s ease;
   transition: all 1s ease;
 }
+.seventeen_menu_panel--display:before{
+  animation: SeventeenMenuAppear 1s ease-out;
+  animation-fill-mode: both;
+}
+.seventeen_menu_panel--hidden:before {
+  animation: SeventeenMenuDisappear .4s ease-out;
+  animation-fill-mode: both;
+}
 
-  .seventeen_menu_panel--display:before{
-    animation: SeventeenMenuAppear 1s ease-out;
-    animation-fill-mode: both;
+@keyframes SeventeenMenuAppear {
+  0% {
+    -webkit-transform: translateY(-100%)translateX(-50%);
+            transform: translateY(-100%)translateX(-50%);
+    -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
   }
-
-  .seventeen_menu_panel--hidden:before {
-    animation: SeventeenMenuDisappear .4s ease-out;
-    animation-fill-mode: both;
+  50% {
+      -webkit-transform: translateY(-50%)translateX(-50%) skewY(-20deg);
+              transform: translateY(-50%)translateX(-50%) skewY(-20deg);
   }
-
-  @keyframes SeventeenMenuAppear {
-    0% {
-      -webkit-transform: translateY(-100%)translateX(-50%);
-              transform: translateY(-100%)translateX(-50%);
-      -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
-    }
-    50% {
-        -webkit-transform: translateY(-50%)translateX(-50%) skewY(-20deg);
-                transform: translateY(-50%)translateX(-50%) skewY(-20deg);
-    }
-    100% {
-        -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
-        -webkit-transform: translateY(0%)translateX(-50%);
-                transform: translateY(0%)translateX(-50%);
-    }
-  }
-  @keyframes SeventeenMenuDisappear {
-    0% {
+  100% {
       -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
       -webkit-transform: translateY(0%)translateX(-50%);
               transform: translateY(0%)translateX(-50%);
-    }
-   100% {
-      -webkit-transform: translateY(-100%)translateX(-50%);
-      transform: translateY(-100%)translateX(-50%);
-      -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
-    }
   }
+}
+@keyframes SeventeenMenuDisappear {
+  0% {
+    -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
+    -webkit-transform: translateY(0%)translateX(-50%);
+            transform: translateY(0%)translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateY(-100%)translateX(-50%);
+    transform: translateY(-100%)translateX(-50%);
+    -webkit-animation-timing-function: cubic-bezier(0.815, 0.090, 0.885, 0.140);
+  }
+}
 
-  .seventeen_menu_panel__links{
-    position:relative;
-    margin-bottom: 40px;
-    padding-left: 40px;
-    -webkit-transform: translateY(40px);
-        -ms-transform: translateY(40px);
-            transform: translateY(40px);
+@media screen and (max-width: 768px) {
+  .seventeen_menu_panel {
+    width: 100vw;
+    right: -100vw;
+  }
+  .seventeen_menu_panel--display{
+    right:0px;
+  }
+}
+
+/*======================================
+=              MENU LINKS              =
+======================================*/
+.seventeen_menu_panel__links{
+  position:relative;
+  margin-bottom: 40px;
+  padding-left: 40px;
+  -webkit-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+          transform: translateY(40px);
+  opacity: 0;
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+        -o-transition: all 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+          transition: all 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
+}
+.seventeen_menu_panel__links--display{
+  animation: SeventeenLinksAppear 1s ease-out;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+}
+@keyframes SeventeenLinksAppear {
+  0% {
     opacity: 0;
-    -webkit-transition: all 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
-         -o-transition: all 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
-            transition: all 1s cubic-bezier(0.075, 0.820, 0.165, 1.000);
   }
-  .seventeen_menu_panel__links--display{
-    animation: SeventeenLinksAppear 1s ease-out;
-    animation-fill-mode: both;
-    animation-delay: 1s;
+  100% {
+    opacity: 1;
   }
-  @keyframes SeventeenLinksAppear {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  .seventeen_menu_panel__link {
-    line-height: 129px;
-    vertical-align: middle;
-    text-decoration: none;
-    color: #fff;
-    font-size: 32px;
-    text-transform: uppercase;
-    font-family: 'PT Sans Narrow', sans-serif;
-  }
-  .seventeen_menu_panel__link:hover,
-  .seventeen_menu_panel__link:focus{
-    color: #444;
-    text-decoration: none;
-  }
-  .seventeen_menu_panel__link_div {
-    padding-left: 28px;
-    padding-right: 28px;
-    vertical-align: middle;
-  }
-  .seventeen_menu_btn{
-    position: fixed;
-    mix-blend-mode:  difference;
-    top: 0px;
-    right: 10px;
-    height: 195px;
-    width: 130px;
-    cursor: pointer;
-    will-change: opacity;
-    -webkit-transition: .25s ease-out;
-    -moz-transition: .25s ease-out;
-    -o-transition: .25s ease-out;
-    transition: .25s ease-out;
-    z-index: 5;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  .seventeen_menu_btn__container{
-    background: transparent;
-    color: #000;
-    display: flex;
-    flex-direction: column;
-  }
-  .seventeen_menu_line1 {
-    position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	    -ms-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
-	height: 100%;
-	width: 1px;
-	background-color: #FFF;
-	-webkit-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
-	     -o-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
-	        transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
+}
+.seventeen_menu_panel__link {
+  line-height: 129px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff;
+  font-size: 32px;
+  text-transform: uppercase;
+  font-family: 'PT Sans Narrow', sans-serif;
+}
+.seventeen_menu_panel__link:hover,
+.seventeen_menu_panel__link:focus{
+  color: #444;
+  text-decoration: none;
+}
+.seventeen_menu_panel__link_div {
+  padding-left: 28px;
+  padding-right: 28px;
+  vertical-align: middle;
+}
+
+/*======================================
+=              MENU BUTTON             =
+======================================*/
+.seventeen_menu_btn{
+  position: fixed;
+  mix-blend-mode:  difference;
+  top: 0px;
+  right: 10px;
+  height: 195px;
+  width: 130px;
+  cursor: pointer;
+  will-change: opacity;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.seventeen_menu_btn__container{
+  background: transparent;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+}
+.seventeen_menu_line1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+  width: 1px;
+  background-color: #FFF;
+  -webkit-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
+        -o-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
+          transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
 }
 .seventeen_menu_btn__container:hover .seventeen_menu_line1 {
   -webkit-transform: translate(-50%, -30%) rotate(90deg) scaleY(0.7);
   -ms-transform: translate(-50%, -30%) rotate(90deg) scaleY(0.7);
       transform: translate(-50%, -30%) rotate(90deg) scaleY(0.7);
 }
-  .seventeen_menu_btn__container .seventeen_menu_line1--display,
-  .seventeen_menu_btn__container:hover .seventeen_menu_line1--display{
-    -webkit-transform: translate(-50%, -50%) rotate(-45deg);
-    -ms-transform: translate(-50%, -50%) rotate(-45deg);
-        transform: translate(-50%, -50%) rotate(-45deg);
-  }
-  .seventeen_menu_line2{
-    position: absolute;
-	top: 50%;
-	left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	    -ms-transform: translate(-50%, -50%);
-	        transform: translate(-50%, -50%);
-	height: 100%;
-	width: 1px;
-	background-color: #FFF;
-	-webkit-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
-	     -o-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
-	        transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
-  }
-  .seventeen_menu_btn__container:hover .seventeen_menu_line2 {
-    -webkit-transform: translate(-50%, -70%) rotate(90deg) scaleY(0.7);
-    -ms-transform: translate(-50%, -70%) rotate(90deg) scaleY(0.7);
-        transform: translate(-50%, -70%) rotate(90deg) scaleY(0.7);
-  }
-  .seventeen_menu_btn__container .seventeen_menu_line2--display,
-  .seventeen_menu_btn__container:hover .seventeen_menu_line2--display {
-    -webkit-transform: translate(-50%, -50%) rotate(45deg);
-    -ms-transform: translate(-50%, -50%) rotate(45deg);
-        transform: translate(-50%, -50%) rotate(45deg);
-  }
-  .seventeen_menu_line3{
-    background-color: #fff;
-    height: 3px;
-    width: 14px;
-    position: absolute;
-    left: 18px;
-    -webkit-transition: .25s ease-out;
-    -moz-transition: .25s ease-out;
-    -o-transition: .25s ease-out;
-    transition:.25s ease-out;
+.seventeen_menu_btn__container .seventeen_menu_line1--display,
+.seventeen_menu_btn__container:hover .seventeen_menu_line1--display{
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
+}
+.seventeen_menu_line2{
+  position: absolute;
+top: 50%;
+left: 50%;
+-webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+height: 100%;
+width: 1px;
+background-color: #FFF;
+-webkit-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
+      -o-transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
+        transition: all 0.5s cubic-bezier(0.000, 0.785, 0.000, 1.000);
+}
+.seventeen_menu_btn__container:hover .seventeen_menu_line2 {
+  -webkit-transform: translate(-50%, -70%) rotate(90deg) scaleY(0.7);
+  -ms-transform: translate(-50%, -70%) rotate(90deg) scaleY(0.7);
+      transform: translate(-50%, -70%) rotate(90deg) scaleY(0.7);
+}
+.seventeen_menu_btn__container .seventeen_menu_line2--display,
+.seventeen_menu_btn__container:hover .seventeen_menu_line2--display {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
+}
 
-    top: 47px;
-  }
-  .seventeen_menu_line3--display{
-    width: 0px;
-  }
-
-  .seveteen_menu_btn__letter {
-    font-weight: 600;
-    font-family: 'Roboto', sans-serif;
-    color: #fff;
-    font-size: 11px;
-    line-height: 150%;
-    display: flex;
-    justify-content: center;
-  }
-
-  @media screen and (max-width: 768px) {
-    .seventeen_menu_panel {
-      width: 100vw;
-      right: -100vw;
-    }
-    .seventeen_menu_panel--display{
-      right:0px;
-    }
-  }
-
-  .seventeen_menu_btn__lines {
-    width: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    height: 27px;
-    margin-top: 14px;
-  }
+.seveteen_menu_btn__letter {
+  font-weight: 600;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-size: 11px;
+  line-height: 150%;
+  display: flex;
+  justify-content: center;
+}
+.seventeen_menu_btn__lines {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  height: 27px;
+  margin-top: 14px;
+}

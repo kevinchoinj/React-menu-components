@@ -13,33 +13,19 @@ class MenuButton extends React.Component{
       menuDisplay,
     } = this.props;
 
-    const menuLine1Names= classNames(
-      'twelve_menu_line1',
-      {
-        'twelve_menu_line1--display':menuDisplay,
-      }
-    );
-    const menuLine2Names= classNames(
-      'twelve_menu_line2',
-      {
-        'twelve_menu_line2--display':menuDisplay,
-      }
-    );
-    const menuLine3Names= classNames(
-      'twelve_menu_line3',
-      {
-        'twelve_menu_line3--display':menuDisplay,
-      }
-    );
+    const buttonName = classNames({
+      'twelve_menu_button__container': true,
+      'twelve_menu_button__container--displayed': menuDisplay,
+    });
 	  return(
       <div
         onClick = {this.toggleMenu}
-        className = "twelve_menu_btn"
+        className = "twelve_menu_button"
       >
-        <div className = "twelve_menu_btn__container">
-          <span className = {menuLine1Names}/>
-          <span className = {menuLine2Names}/>
-          <span className = {menuLine3Names}/>
+        <div className = {buttonName}>
+          <span className = "twelve_menu_button__line"/>
+          <span className = "twelve_menu_button__line"/>
+          <span className = "twelve_menu_button__line"/>
         </div>
 			</div>
 		)
