@@ -6,6 +6,7 @@
   opacity: 0;
   width: 100vw;
   height: 100vh;
+  top: 0px;
   background-color: #111;
   -webkit-transition: .25s ease-out;
   -moz-transition: .25s ease-out;

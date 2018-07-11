@@ -1,0 +1,338 @@
+/*======================================
+=              MENU NAVBAR             =
+======================================*/
+.eighteen_menu_bar {
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  top: 0px;
+  background-color: rgba(0,0,0,.5);
+  z-index: 2;
+  color: #fff;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  pointer-events: none;
+}
+.eighteen_menu_content {
+  max-width: 1000px;
+  display: flex;
+}
+.eighteen_menu_title {
+  line-height: 100px;
+  vertical-align: middle;
+  pointer-events: auto;
+  padding: 0px 14px;
+  cursor: pointer;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+}
+.eighteen_menu_title--scrolled {
+  line-height: 50px;
+}
+
+/*=====================================
+=            MENU SUBMENUS            =
+======================================*/
+.eighteen_submenu_panel {
+  background-color: #000;
+  position: absolute;
+  width: 150px;
+  color: #fff;
+  max-height: 0px;
+  overflow: hidden;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  padding: 0px 14px;
+}
+.eighteen_submenu_panel--display {
+  max-height: 200px;
+  padding: 7px 14px;
+}
+.eighteen_submenu_link__container {
+  pointer-events: auto;
+  margin: 7px 0px;
+  opacity: 1;
+}
+.eighteen_submenu_link {
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+}
+.eighteen_submenu_link__container {
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  opacity: 0;
+  font-size: 14px;
+  line-height: 100px;
+  vertical-align: middle;
+  margin: 0px 14px;
+}
+.eighteen_menu_content--top .eighteen_submenu_link__container {
+  animation: EighteenShowTop .4s linear;
+  animation-fill-mode: both;
+  opacity: 1;
+}
+@keyframes EighteenShowTop {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+.eighteen_menu_content--scrolled .eighteen_submenu_link__container {
+  opacity: 0;
+  animation: EighteenHideTop .4s linear;
+  animation-fill-mode: both;
+}
+@keyframes EighteenHideTop {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.eighteen_menu_content--top .eighteen_submenu_link__container:nth-child(1) {
+  animation-delay: 0s;
+}
+.eighteen_menu_content--top .eighteen_submenu_link__container:nth-child(2) {
+  animation-delay: .1s;
+}
+.eighteen_menu_content--top .eighteen_submenu_link__container:nth-child(3) {
+  animation-delay: .2s;
+}
+.eighteen_menu_content--top .eighteen_submenu_link__container:nth-child(4) {
+  animation-delay: .3s;
+}
+.eighteen_menu_content--top .eighteen_submenu_link__container:nth-child(5) {
+  animation-delay: .4s;
+}
+
+/*======================================
+=             PAGE CONTENT             =
+======================================*/
+.eighteen_page_content {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  color: #fff;
+  font-size: 84px;
+  background-color: #666;
+}
+
+/*======================================
+=           SCROLLED MENU             =
+======================================*/
+/*======================================
+=              MENU PANEL              =
+======================================*/
+.eighteen_menu_panel {
+  position: fixed;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  background-color: #111;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+  transform: scale(1.2, 1.2);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+}
+.eighteen_menu_panel--display {
+  opacity: 1;
+  transform: scale(1,1);
+  pointer-events: auto;
+}
+.eighteen_menu_panel_overlay {
+  background-color: rgba(0, 0, 0, .5);
+  height: 100vh;
+  width: 100vw;
+}
+.eighteen_menu_panel__links_wrapper {
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  height: 100vh;
+  pointer-events:none;
+}
+.eighteen_menu_panel__links_wrapper--display {
+  pointer-events:auto;
+}
+
+/*======================================
+=              MENU LINKS              =
+======================================*/
+.eighteen_menu_panel__links {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.eighteen_menu_panel__links--display {
+  opacity: 1;
+  pointer-events: auto;
+}
+.eighteen_menu_panel__sect {
+  display: flex;
+  justify-content: center;
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect {
+  animation: TwelveFadeIn .3s linear;
+  animation-fill-mode: both;
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect:nth-child(1) {
+  animation-delay: .15s
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect:nth-child(2) {
+  animation-delay: .3s
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect:nth-child(3) {
+  animation-delay: .45s
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect:nth-child(4) {
+  animation-delay: .6s
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect:nth-child(5) {
+  animation-delay: .75s
+}
+.eighteen_menu_panel__links--display .eighteen_menu_panel__sect:nth-child(6) {
+  animation-delay: .9s
+}
+.eighteen_menu_panel__link{
+  text-decoration: none;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 7vw;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+  font-family: 'Oswald', Helvetica, sans-serif;
+  line-height: 175%;
+}
+.eighteen_menu_panel__link:hover {
+  color: #fff;
+}
+
+@keyframes TwelveFadeIn {
+  0% {
+    transform: translate(0, 100px);
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
+/*======================================
+=              MENU BUTTON             =
+======================================*/
+.eighteen_menu_button{
+  position: fixed;
+  mix-blend-mode:  difference;
+  top: 0px;
+  right: 10px;
+  width: 60px;
+  height: 70px;
+  cursor: pointer;
+  will-change: opacity;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  z-index: 5;
+  opacity: 0;
+  cursor: default;
+  pointer-events: none;
+}
+.eighteen_menu_button--scrolled {
+  pointer-events: auto;
+  opacity: 1;
+  cursor: pointer;
+}
+.eighteen_menu_button__container{
+  background: transparent;
+  color: #000;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition: .25s ease-out;
+  cursor: default;
+}
+.eighteen_menu_button__line {
+  background-color: #fff;
+  height: 3px;
+  position: absolute;
+  left: 18px;
+  -webkit-transition: .25s ease-out;
+  -moz-transition: .25s ease-out;
+  -o-transition: .25s ease-out;
+  transition:.25s ease-out;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.eighteen_menu_button__line:nth-child(1) {
+  width: 24px;
+  top: 29px;
+}
+.eighteen_menu_button__line:nth-child(2) {
+  width: 24px;
+  top: 38px;
+}
+.eighteen_menu_button__line:nth-child(3) {
+  width: 14px;
+  top: 47px;
+}
+.eighteen_menu_button__container--displayed .eighteen_menu_button__line:nth-child(1) {
+  top: 34px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.eighteen_menu_button__container--displayed .eighteen_menu_button__line:nth-child(2) {
+  top: 34px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.eighteen_menu_button__container--displayed .eighteen_menu_button__line:nth-child(3) {
+  width: 0px;
+}

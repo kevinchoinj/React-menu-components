@@ -71,7 +71,7 @@
 /*======================================
 =              MENU BUTTON             =
 ======================================*/
-.two_menu_button{
+.one_menu_button{
   position: fixed;
   mix-blend-mode:  difference;
   top: 0px;
@@ -86,11 +86,11 @@
   transition: .25s ease-out;
   z-index: 5;
 }
-.two_menu_button__container{
+.one_menu_button__container{
   background: transparent;
   color: #000;
 }
-.two_menu_button__line {
+.one_menu_button__line {
   background-color: #fff;
   height: 3px;
   position: absolute;
@@ -104,32 +104,32 @@
   -o-transform: rotate(0deg);
   transform: rotate(0deg);
 }
-.two_menu_button__line:nth-child(1) {
+.one_menu_button__line:nth-child(1) {
   width: 24px;
   top: 29px;
 }
-.two_menu_button__line:nth-child(2) {
+.one_menu_button__line:nth-child(2) {
   width: 24px;
   top: 38px;
 }
-.two_menu_button__line:nth-child(3) {
+.one_menu_button__line:nth-child(3) {
   width: 14px;
   top: 47px;
 }
-.two_menu_button__container--displayed .two_menu_button__line:nth-child(1) {
+.one_menu_button__container--displayed .one_menu_button__line:nth-child(1) {
   top: 34px;
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-.two_menu_button__container--displayed .two_menu_button__line:nth-child(2) {
+.one_menu_button__container--displayed .one_menu_button__line:nth-child(2) {
   top: 34px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-.two_menu_button__container--displayed .two_menu_button__line:nth-child(3) {
+.one_menu_button__container--displayed .one_menu_button__line:nth-child(3) {
   width: 0px;
 }
