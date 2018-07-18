@@ -1,0 +1,205 @@
+/*======================================
+=              MENU PANEL              =
+======================================*/
+.nineteen_menu_panel{
+  height:100vh;
+  width: 100vw;
+  position: fixed;
+  left: -50vw;;
+  background-color: #000;
+  }
+  .nineteen_menu_panel--display{
+    animation: ElevenMenuAppear .6s ease-out;
+    animation-fill-mode: both;
+  }
+  .nineteen_menu_panel--hidden {
+    animation: ElevenMenuDisappear .4s ease-out;
+    animation-fill-mode: both;
+  }
+
+  @keyframes ElevenMenuAppear {
+    0% {
+      transform: translateX(0vw);
+    }
+   100% {
+      transform: translateX(50vw);
+    }
+  }
+  @keyframes ElevenMenuDisappear {
+    0% {
+      transform: translateX(50vw);
+    }
+   100% {
+      transform: translateX(0vw);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nineteen_menu_panel {
+      width: 100vw;
+      right: -100vw;
+    }
+    .nineteen_menu_panel--display{
+      right:0px;
+    }
+  }
+
+  .nineteen_home__title_container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nineteen_home__title {
+    font-family: 'Bebas Neue', Helvetica, sans-serif;
+    position: absolute;
+    float: right;
+    font-size: 5em;
+    font-weight: 600;
+    position: absolute;
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    right: 100px;
+    color: #fff;
+    transform-origin: 100% 0;
+    transform: translateX(0px) rotate(-90deg);
+    white-space: nowrap;
+
+    white-space: nowrap;
+    -webkit-transition: .25s ease-out;
+    -moz-transition: .25s ease-out;
+    -o-transition: .25s ease-out;
+    transition:.25s ease-out;
+  }
+  /*======================================
+  =              MENU LINKS              =
+  ======================================*/
+  .nineteen_menu_panel__links{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    z-index: 4;
+    opacity: 0;
+  }
+  .nineteen_menu_panel__links--display{
+    animation: NineteenFadeIn .4s linear;
+    animation-fill-mode: both;
+    opacity: 1;
+    animation-delay: .4s;
+  }
+  .nineteen_menu_panel__links--hidden {
+    animation: NineteenFadeOut .4s linear;
+    animation-fill-mode: both;
+    opacity: 0;
+  }
+
+  .nineteen_menu_panel__link {
+    line-height: 129px;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: 'PT Sans Narrow', sans-serif;
+  }
+  .nineteen_menu_panel__link:hover,
+  .nineteen_menu_panel__link:focus{
+    color: #444;
+    text-decoration: none;
+  }
+  .nineteen_menu_panel__link_div {
+    padding-left: 28px;
+    padding-right: 28px;
+    vertical-align: middle;
+  }
+  @keyframes NineteenFadeIn {
+    0% {
+      transform: translate(0, 100px);
+      opacity: 0;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, 0px);
+    }
+  }
+  @keyframes NineteenFadeOut {
+    0% {
+      transform: translate(0, 0px);
+      opacity: 1;
+    }
+    85% {
+      opacity: 0;
+    }
+    100% {
+      transform: translate(0, 100px);
+    }
+  }
+
+  /*======================================
+  =              MENU BUTTON             =
+  ======================================*/
+  .nineteen_menu_button{
+    position: fixed;
+    mix-blend-mode:  difference;
+    top: 0px;
+    right: 10px;
+    width: 60px;
+    height: 70px;
+    cursor: pointer;
+    will-change: opacity;
+    -webkit-transition: .25s ease-out;
+    -moz-transition: .25s ease-out;
+    -o-transition: .25s ease-out;
+    transition: .25s ease-out;
+    z-index: 5;
+  }
+  .nineteen_menu_button__container{
+    background: transparent;
+    color: #000;
+  }
+  .nineteen_menu_button__line {
+    background-color: #fff;
+    height: 3px;
+    position: absolute;
+    left: 18px;
+    -webkit-transition: .25s ease-out;
+    -moz-transition: .25s ease-out;
+    -o-transition: .25s ease-out;
+    transition:.25s ease-out;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  .nineteen_menu_button__line:nth-child(1) {
+    width: 24px;
+    top: 29px;
+  }
+  .nineteen_menu_button__line:nth-child(2) {
+    width: 24px;
+    top: 38px;
+  }
+  .nineteen_menu_button__line:nth-child(3) {
+    width: 14px;
+    top: 47px;
+  }
+  .nineteen_menu_button__container--displayed .nineteen_menu_button__line:nth-child(1) {
+    top: 34px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .nineteen_menu_button__container--displayed .nineteen_menu_button__line:nth-child(2) {
+    top: 34px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .nineteen_menu_button__container--displayed .nineteen_menu_button__line:nth-child(3) {
+    width: 0px;
+  }
