@@ -23,8 +23,6 @@ class MenuPanel extends React.Component{
       <div>
         <div className = {menuClassName}>
           <MenuText />
-
-
             <div className="nineteen_home__title">
             TITLE PAGE
             </div>

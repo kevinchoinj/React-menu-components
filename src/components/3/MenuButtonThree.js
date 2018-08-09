@@ -1,7 +1,7 @@
 import React from "react";
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as menuActions from '../../actions/menu';
+import * as menuActions from 'actions/menu';
 import classNames from 'classnames';
 
 class MenuButtonThree extends React.Component{
@@ -23,9 +23,9 @@ class MenuButtonThree extends React.Component{
 				className={buttonName}
 				onClick={()=>this.toggleMenu(menuDisplay)}
 			>
-				<span className="three_menu_button__line"></span>
-				<span className="three_menu_button__line"></span>
-				<span className="three_menu_button__line"></span>
+				<span className="three_menu_button__line_one"></span>
+				<span className="three_menu_button__line_two"></span>
+				<span className="three_menu_button__line_three"></span>
 			</div>
 	  );
   }

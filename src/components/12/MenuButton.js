@@ -34,7 +34,7 @@ class MenuButton extends React.Component{
 
 export default connect(
   (state, ownProps) => ({
-    menuDisplay:state.menu.menuDisplay,
+    menuDisplay: state.menu.menuDisplay,
   }),
   dispatch => ({
     menuActions: bindActionCreators(menuActions, dispatch),

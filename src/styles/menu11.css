@@ -11,6 +11,7 @@ background-color: #000;
 .eleven_menu_panel--display{
   animation: ElevenMenuAppear .6s ease-out;
   animation-fill-mode: both;
+  transform: translateY(50vh);
 }
 .eleven_menu_panel--hidden {
   animation: ElevenMenuDisappear .4s ease-out;

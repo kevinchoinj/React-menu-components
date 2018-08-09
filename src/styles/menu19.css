@@ -9,15 +9,15 @@
   background-color: #000;
   }
   .nineteen_menu_panel--display{
-    animation: ElevenMenuAppear .6s ease-out;
+    animation: NineteenMenuAppear .6s ease-out;
     animation-fill-mode: both;
   }
   .nineteen_menu_panel--hidden {
-    animation: ElevenMenuDisappear .4s ease-out;
+    animation: NineteenMenuDisappear .4s ease-out;
     animation-fill-mode: both;
   }
 
-  @keyframes ElevenMenuAppear {
+  @keyframes NineteenMenuAppear {
     0% {
       transform: translateX(0vw);
     }
@@ -25,7 +25,7 @@
       transform: translateX(50vw);
     }
   }
-  @keyframes ElevenMenuDisappear {
+  @keyframes NineteenMenuDisappear {
     0% {
       transform: translateX(50vw);
     }
