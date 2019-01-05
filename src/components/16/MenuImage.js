@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import * as menuActions from '../../actions/menu';
@@ -27,13 +27,13 @@ class BackgroundImageDisplay extends React.Component{
     );
 
 
-	  return(
+    return(
       <div
         onClick = {()=>this.toggleMenu(pathName)}
       >
         <div className={backgroundClassName} style={{backgroundImage: 'url('+backgroundName+')'}}/>
       </div>
-	  );
+    );
   }
 }
 

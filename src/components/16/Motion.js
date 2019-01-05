@@ -22,7 +22,7 @@ const imageValues = [
   image6,
   image7,
   image8,
-]
+];
 
 const springSettings = {stiffness: 170, damping: 26};
 
@@ -81,8 +81,8 @@ class MenuCarousel extends React.Component {
                 {configs.map((style, i) =>
                   <Motion key={i} style={style}>
                     {style =>
-                    <div>
-                      <img className="demo4-photo" src={imageValues[currentPhoto]} style={style} alt=""/>
+                      <div>
+                        <img className="demo4-photo" src={imageValues[currentPhoto]} style={style} alt=""/>
                       </div>
                     }
                   </Motion>

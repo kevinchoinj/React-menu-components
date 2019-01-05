@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import MenuPanel from './MenuPanel';
 import MenuButton from './MenuButton';
 import {connect} from 'react-redux';
@@ -16,12 +16,12 @@ class MenuWrap extends React.Component{
       }
     );
 
-	  return(
-			<div className={wrapperName}>
+    return(
+      <div className={wrapperName}>
         <MenuPanel />
         <MenuButton />
-			</div>
-	  );
+      </div>
+    );
   }
 }
 

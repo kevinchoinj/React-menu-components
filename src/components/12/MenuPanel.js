@@ -18,12 +18,12 @@ class MenuPanel extends React.Component{
 
     const panelStyle = {
       backgroundImage: 'url('+bgImage+')',
-    }
+    };
     return(
       <div className = {menuClassName} style={panelStyle}>
         <div className="twelve_menu_panel_overlay"/>
       </div>
-    )
+    );
   }
 }
 

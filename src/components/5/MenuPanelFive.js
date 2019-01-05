@@ -33,7 +33,7 @@ class MenuPanelFive extends React.Component{
         <li className="five_menu_block"/>
         <li className="five_menu_block"/>
       </div>
-    )
+    );
   }
 }
 

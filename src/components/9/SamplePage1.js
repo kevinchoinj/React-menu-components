@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import image1 from '../../media/1.jpg';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
@@ -10,8 +10,8 @@ class SamplePage1 extends React.Component{
     this.props.menuActions.setPageName(1);
   }
   render(){
-	  return(
-			<div>
+    return(
+      <div>
         <div className="nine_sample_header" style={{backgroundImage: 'url('+image1+')'}}/>
         <div className="nine_sample_placeholder"/>
         <div className="nine_sample_text">
@@ -21,7 +21,7 @@ class SamplePage1 extends React.Component{
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </div>
       </div>
-	  );
+    );
   }
 }
 

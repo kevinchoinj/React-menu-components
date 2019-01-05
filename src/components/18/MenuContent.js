@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {Link} from 'react-router-dom';
 import * as navbarActions from '../../actions/navbar';
 import classNames from 'classnames';
@@ -42,9 +42,9 @@ class MenuContent extends React.Component{
         text: 'Menu5',
         link: '/menus/5',
       },
-    ]
+    ];
 
-	  return(
+    return(
       <div className={menuClassName}>
         {menuValues.map((value, index)=>(
           <div key={index} className="eighteen_submenu_link__container" >
@@ -53,8 +53,8 @@ class MenuContent extends React.Component{
             </Link>
           </div>
         ))}
-			</div>
-	  );
+      </div>
+    );
   }
 }
 
@@ -64,10 +64,9 @@ export default connect(
       scrollAmount,
     } = state.scroll;
     return{
-    scrolledPage: scrollAmount > COVER_TOP_MARGIN,
-    scrolledTop: scrollAmount === 0,
-    }
-
+      scrolledPage: scrollAmount > COVER_TOP_MARGIN,
+      scrolledTop: scrollAmount === 0,
+    };
   },
   dispatch => ({
     navbarActions: bindActionCreators(navbarActions, dispatch),

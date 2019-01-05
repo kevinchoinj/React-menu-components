@@ -20,7 +20,7 @@ class MenuPanelOne extends React.Component{
       <div className = {menuClassName}>
         <MenuTextTwo />
       </div>
-    )
+    );
   }
 }
 

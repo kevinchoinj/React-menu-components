@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import MenuWrap from '../components/19/MenuWrap';
 
 class MenuPage extends React.Component{
   render(){
-	  return(
-			<div>
+    return(
+      <div>
         <MenuWrap/>
-			</div>
-	  );
+      </div>
+    );
   }
 }
 

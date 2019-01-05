@@ -32,7 +32,7 @@ class MenuPanelSix extends React.Component{
         <li className="six_menu_block"/>
         <li className="six_menu_block"/>
       </div>
-    )
+    );
   }
 }
 

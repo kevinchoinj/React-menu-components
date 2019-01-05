@@ -1,15 +1,15 @@
-import React from "react";
+import React from 'react';
 import MenuButtonTwo from './MenuButtonTwo';
 import MenuPanelTwo from './MenuPanelTwo';
 
 class MenuWrapTwo extends React.Component{
   render(){
-	  return(
-			<div>
+    return(
+      <div>
         <MenuButtonTwo />
         <MenuPanelTwo />
-			</div>
-	  );
+      </div>
+    );
   }
 }
 

@@ -29,7 +29,7 @@ class MenuPanel extends React.Component{
 
     const bgStyle={
       backgroundImage: 'url('+bgimage+')'
-    }
+    };
 
     return(
       <div>
@@ -39,7 +39,7 @@ class MenuPanel extends React.Component{
           <MenuText />
         </div>
       </div>
-    )
+    );
   }
 }
 

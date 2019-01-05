@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import MenuText from './MenuText';
 import Scrollbar from 'smooth-scrollbar';
 import classNames from 'classnames';
@@ -6,9 +6,9 @@ import {connect} from 'react-redux';
 
 class MenuContent extends React.Component{
   componentDidMount() {
-		Scrollbar.init(document.querySelector('#sixteen_content_wrapper'), {
-			alwaysShowTracks: true,
-		});
+    Scrollbar.init(document.querySelector('#sixteen_content_wrapper'), {
+      alwaysShowTracks: true,
+    });
   }
 
   render(){
@@ -19,14 +19,14 @@ class MenuContent extends React.Component{
         'sixteen_menu_text_wrapper--display': menuDisplay
       }
     );
-	  return(
+    return(
       <div
         className={wrapperClassName}
         id="sixteen_content_wrapper"
       >
         <MenuText/>
       </div>
-	  );
+    );
   }
 }
 

@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 import MenuButtonOne from './MenuButtonOne';
 import MenuPanelOne from './MenuPanelOne';
 import MenuTextOne from './MenuTextOne';
 
 class MenuWrapOne extends React.Component{
   render(){
-	  return(
-			<div>
+    return(
+      <div>
         <MenuButtonOne />
         <MenuPanelOne />
         <MenuTextOne />
-			</div>
-	  );
+      </div>
+    );
   }
 }
 

@@ -27,7 +27,7 @@ class MenuTextOne extends React.Component{
       {text: 'Menu4', link: '/menus/4'},
       {text: 'Menu5', link: '/menus/5'},
       {text: 'Menu6', link: '/menus/6'},
-    ]
+    ];
 
     return(
       <div className = {menuClassName}>
@@ -42,8 +42,8 @@ class MenuTextOne extends React.Component{
             </Link>
           </div>
         ))}
-    </div>
-    )
+      </div>
+    );
   }
 }
 

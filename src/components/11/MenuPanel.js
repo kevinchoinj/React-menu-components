@@ -17,15 +17,13 @@ class MenuPanel extends React.Component{
       }
     );
 
-
-
     return(
       <div>
         <div className = {menuClassName}>
           <MenuText />
         </div>
       </div>
-    )
+    );
   }
 }
 

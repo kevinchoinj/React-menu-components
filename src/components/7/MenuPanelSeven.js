@@ -42,7 +42,7 @@ class MenuPanelSeven extends React.Component{
         <li className="seven_menu_block"/>
         <li className="seven_menu_block"/>
       </div>
-    )
+    );
   }
 }
 

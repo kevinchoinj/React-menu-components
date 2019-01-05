@@ -27,7 +27,7 @@ class MenuText extends React.Component{
       {value: '07', text: 'Menus6', link: '/menus/6', pageName: 7},
       {value: '08', text: 'Menus7', link: '/menus/7', pageName: 8},
       {value: '09', text: 'Menus8', link: '/menus/8', pageName: 9},
-    ]
+    ];
 
     const menuClassName = classNames(
       'nine_menu_panel__links',
@@ -50,15 +50,15 @@ class MenuText extends React.Component{
                 onMouseEnter={()=>this.hoverOption(value.pageName)}
               >
                 <div className="nine_number">{value.value}</div>
-                  <div className="nine_menu_panel__link_title">
-                    {value.text}
-                  </div>
+                <div className="nine_menu_panel__link_title">
+                  {value.text}
+                </div>
               </div>
             </Link>
           </div>
         ))}
       </div>
-    )
+    );
   }
 }
 

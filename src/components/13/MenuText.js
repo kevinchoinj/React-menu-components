@@ -24,22 +24,22 @@ class MenuTextEight extends React.Component{
       {text: 'Menu1', link: '/menus/1'},
       {text: 'Menu2', link: '/menus/2'},
       {text: 'Menu3', link: '/menus/3'},
-    ]
+    ];
     return(
       <div className = {menuClassName}>
         {menuValues.map((value, index)=>(
           <div key={index} className = 'thirteen_menu_panel__link_div'>
-          <Link
-            to={value.link}
-            className = 'thirteen_menu_panel__link'
-            onClick = {this.toggleMenu}
-          >
-            {value.text}
-          </Link>
-        </div>
+            <Link
+              to={value.link}
+              className = 'thirteen_menu_panel__link'
+              onClick = {this.toggleMenu}
+            >
+              {value.text}
+            </Link>
+          </div>
         ))}
       </div>
-    )
+    );
   }
 }
 

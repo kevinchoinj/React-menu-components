@@ -27,7 +27,7 @@ class MenuText extends React.Component{
       {text: 'Menu3', link: '/menus/3'},
       {text: 'Menu4', link: '/menus/4'},
       {text: 'Menu5', link: '/menus/5'},
-    ]
+    ];
     return(
       <div className = {menuClassName}>
         {menuValues.map((value, index)=>(
@@ -42,7 +42,7 @@ class MenuText extends React.Component{
           </div>
         ))}
       </div>
-    )
+    );
   }
 }
 

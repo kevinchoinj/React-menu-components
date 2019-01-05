@@ -1,14 +1,14 @@
-import React from "react";
+import React from 'react';
 import MenuContent from './MenuContent';
 import {connect} from 'react-redux';
 
 class MenuBar extends React.Component{
   render(){
-	  return(
+    return(
       <div className="eighteen_menu_bar">
         <MenuContent/>
       </div>
-	  );
+    );
   }
 }
 

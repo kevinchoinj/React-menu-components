@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import classNames from 'classnames';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
@@ -7,7 +7,7 @@ import * as menuActions from '../../actions/menu';
 const COVER_TOP_MARGIN = 100;
 
 class MenuButton extends React.Component{
-	toggleMenu = () => {
+  toggleMenu = () => {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
   render(){
@@ -24,7 +24,7 @@ class MenuButton extends React.Component{
       'eighteen_menu_button__container': true,
       'eighteen_menu_button__container--displayed': menuDisplay,
     });
-	  return(
+    return(
       <div
         onClick = {this.toggleMenu}
         className = {wrapperName}
@@ -34,9 +34,9 @@ class MenuButton extends React.Component{
           <span className = "eighteen_menu_button__line"/>
           <span className = "eighteen_menu_button__line"/>
         </div>
-			</div>
-		)
-	}
+      </div>
+    );
+  }
 }
 
 export default connect(
@@ -48,9 +48,9 @@ export default connect(
       menuDisplay,
     } = state.menu;
     return{
-    menuDisplay: menuDisplay,
-    scrolledPage: scrollAmount > COVER_TOP_MARGIN,
-    }
+      menuDisplay: menuDisplay,
+      scrolledPage: scrollAmount > COVER_TOP_MARGIN,
+    };
   },
   dispatch => ({
     menuActions: bindActionCreators(menuActions, dispatch),

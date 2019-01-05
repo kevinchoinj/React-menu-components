@@ -25,7 +25,7 @@ class MenuPanel extends React.Component{
           <MenuText />
         </div>
       </div>
-    )
+    );
   }
 }
 

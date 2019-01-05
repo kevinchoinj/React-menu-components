@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import classNames from 'classnames';
 import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import * as menuActions from '../../actions/menu';
 
 class MenuButton extends React.Component{
-	toggleMenu = () => {
+  toggleMenu = () => {
     this.props.menuActions.toggleMenu(!this.props.menuDisplay);
   }
   render(){
@@ -17,7 +17,7 @@ class MenuButton extends React.Component{
       'eight_menu_button__container': true,
       'eight_menu_button__container--displayed': menuDisplay,
     });
-	  return(
+    return(
       <div
         onClick = {this.toggleMenu}
         className = "eight_menu_button"
@@ -27,9 +27,9 @@ class MenuButton extends React.Component{
           <span className = "eight_menu_button__line"/>
           <span className = "eight_menu_button__line"/>
         </div>
-			</div>
-		)
-	}
+      </div>
+    );
+  }
 }
 
 export default connect(

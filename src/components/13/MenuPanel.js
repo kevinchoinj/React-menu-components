@@ -46,7 +46,7 @@ class MenuPanelEight extends React.Component{
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 

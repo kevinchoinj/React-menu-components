@@ -3,33 +3,33 @@
 ======================================*/
 .seventeen_menu_panel {
   position: absolute;
-	width: 100vw;
-	top: 0px;
-	left: 0px;
-	padding: 120px 130px 90px 130px;
-	max-height: 100vh;
-	display: -webkit-box;
-	display: -ms-flexbox;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  padding: 120px 130px 90px 130px;
+  max-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-	-webkit-box-orient: horizontal;
-	-webkit-box-direction: normal;
-	    -ms-flex-flow: row wrap;
-	        flex-flow: row wrap;
-	-webkit-transition: all 1s ease;
-	-o-transition: all 1s ease;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 .seventeen_menu_panel:before {
-	content: '';
-	width: 120%;
-	height: 100%;
-	position: absolute;
-	top: 0px;
-	left: 50%;
+  content: '';
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 50%;
   background-color: #000;
   transform: translateY(-100%)translateX(-50%);
   -webkit-transition: all 1s ease;
-	-o-transition: all 1s ease;
+  -o-transition: all 1s ease;
   transition: all 1s ease;
 }
 .seventeen_menu_panel--display:before{

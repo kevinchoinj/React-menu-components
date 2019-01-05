@@ -12,7 +12,7 @@ class MenuPanelFour extends React.Component{
 
     const bgStyle={
       backgroundImage: 'url('+bgimage+')'
-    }
+    };
 
     const backgroundName = classNames(
       'four_menu_background',
@@ -20,7 +20,7 @@ class MenuPanelFour extends React.Component{
         'four_menu_background--display': menuDisplay,
         'four_menu_background--hidden': menuDisplay===false,
       }
-    )
+    );
     const animationShowName = classNames(
       'four_menu_panel__animation_show',
       {
@@ -40,7 +40,7 @@ class MenuPanelFour extends React.Component{
         <div className={animationShowName}/>
         <div className={animationHideName} style={bgStyle}/>
       </div>
-    )
+    );
   }
 }
 

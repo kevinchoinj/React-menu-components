@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import classNames from 'classnames';
 import MenuContent from './MenuContent';
 import {connect} from 'react-redux';
@@ -16,11 +16,11 @@ class MenuBar extends React.Component{
         'fifteen_menu_bar--scrolled': scrolledPage,
       }
     );
-	  return(
+    return(
       <div className={menuBarName}>
         <MenuContent/>
       </div>
-	  );
+    );
   }
 }
 
@@ -30,8 +30,8 @@ export default connect(
       scrollAmount,
     } = state.scroll;
     return{
-    scrolledPage: scrollAmount > COVER_TOP_MARGIN,
-    }
+      scrolledPage: scrollAmount > COVER_TOP_MARGIN,
+    };
   },
   dispatch => ({
   }),

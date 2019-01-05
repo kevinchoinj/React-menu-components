@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 import MenuWrapEight from '../components/8/MenuWrapEight';
 
 class MenuPageEight extends React.Component{
   render(){
-	  return(
-			<div>
-				<MenuWrapEight />
-			</div>
-	  );
+    return(
+      <div>
+        <MenuWrapEight />
+      </div>
+    );
   }
 }
 

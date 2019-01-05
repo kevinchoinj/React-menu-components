@@ -36,20 +36,20 @@ class MainMenuPanel extends React.Component{
       {text: 'Menu17', link: '/menus/17'},
       {text: 'Menu18', link: '/menus/18'},
       {text: 'Menu19', link: '/menus/19'},
-    ]
+    ];
     return(
       <div className = {menuClassName}>
         {menuValues.map((value, index)=>(
-        <div key={index}>
-         <Link to={value.link}>
-            <div className="main_menu_section">
-              {value.text}
-            </div>
-          </Link>
-        </div>
+          <div key={index}>
+            <Link to={value.link}>
+              <div className="main_menu_section">
+                {value.text}
+              </div>
+            </Link>
+          </div>
         ))}
       </div>
-    )
+    );
   }
 }
 

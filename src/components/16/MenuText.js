@@ -39,7 +39,7 @@ class MenuText extends React.Component{
       {text: 'Menu5', link: '/menus/5', pageName: 5},
       {text: 'Menu5', link: '/menus/5', pageName: 6},
       {text: 'Menu5', link: '/menus/5', pageName: 7},
-    ]
+    ];
 
     return(
       <div className={wrapperName}>
@@ -57,9 +57,9 @@ class MenuText extends React.Component{
 
             </div>
           ))}
+        </div>
       </div>
-    </div>
-    )
+    );
   }
 }
 

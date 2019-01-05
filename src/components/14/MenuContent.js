@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {Link} from 'react-router-dom';
 import * as navbarActions from '../../actions/navbar';
 import classNames from 'classnames';
@@ -78,28 +78,28 @@ class MenuContent extends React.Component{
         panelName: fourSubmenuName,
         submenuContent: 4,
       },
-    ]
+    ];
     const menuOneValues = [
       {text: 'Menu1', link: '/menus/1'},
       {text: 'Menu2', link: '/menus/2'},
       {text: 'Menu3', link: '/menus/3'},
-    ]
+    ];
     const menuTwoValues = [
       {text: 'Menu4', link: '/menus/4'},
       {text: 'Menu5', link: '/menus/5'},
       {text: 'Menu6', link: '/menus/6'},
-    ]
+    ];
     const menuThreeValues = [
       {text: 'Menu7', link: '/menus/7'},
       {text: 'Menu8', link: '/menus/8'},
       {text: 'Menu9', link: '/menus/9'},
-    ]
+    ];
     const menuFourValues = [
       {text: 'Menu10', link: '/menus/10'},
       {text: 'Menu11', link: '/menus/11'},
       {text: 'Menu12', link: '/menus/12'},
-    ]
-	  return(
+    ];
+    return(
       <div className="fourteen_menu_content">
         {menuValues.map((value, index)=>(
           <div key={index}>
@@ -123,7 +123,7 @@ class MenuContent extends React.Component{
                   </div>
                 ))}
               </div>
-            :null}
+              :null}
 
             {value.submenuContent === 2 ?
               <div className={value.panelName}>
@@ -138,7 +138,7 @@ class MenuContent extends React.Component{
                   </div>
                 ))}
               </div>
-            :null}
+              :null}
 
             {value.submenuContent === 3 ?
               <div className={value.panelName}>
@@ -148,12 +148,12 @@ class MenuContent extends React.Component{
                       to={value.link}
                       className="fourteen_submenu_link"
                     >
-                    {value.text}
+                      {value.text}
                     </Link>
                   </div>
                 ))}
               </div>
-            :null}
+              :null}
 
             {value.submenuContent === 4 ?
               <div className={value.panelName}>
@@ -163,18 +163,18 @@ class MenuContent extends React.Component{
                       to={value.link}
                       className="fourteen_submenu_link"
                     >
-                    {value.text}
+                      {value.text}
                     </Link>
                   </div>
                 ))}
               </div>
-            :null}
+              :null}
 
 
           </div>
         ))}
-			</div>
-	  );
+      </div>
+    );
   }
 }
 
@@ -187,13 +187,12 @@ export default connect(
       navMenus,
     } = state.navbar;
     return{
-    scrolledPage: scrollAmount > COVER_TOP_MARGIN,
-    submenuOne: navMenus.menuOne,
-    submenuTwo: navMenus.menuTwo,
-    submenuThree: navMenus.menuThree,
-    submenuFour: navMenus.menuFour,
-    }
-
+      scrolledPage: scrollAmount > COVER_TOP_MARGIN,
+      submenuOne: navMenus.menuOne,
+      submenuTwo: navMenus.menuTwo,
+      submenuThree: navMenus.menuThree,
+      submenuFour: navMenus.menuFour,
+    };
   },
   dispatch => ({
     navbarActions: bindActionCreators(navbarActions, dispatch),

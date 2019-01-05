@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import img1 from '../media/home1.jpg';
 import img2 from '../media/home2.jpg';
 import img3 from '../media/home3.jpg';
@@ -22,7 +22,7 @@ import {Link} from 'react-router-dom';
 
 class Home extends React.Component{
   render(){
-		const pageValues = [
+    const pageValues = [
       {text: 'Page1', link: '/menus/1', imageSrc: img1},
       {text: 'Page2', link: '/menus/2', imageSrc: img2},
       {text: 'Page3', link: '/menus/3', imageSrc: img3},
@@ -33,30 +33,29 @@ class Home extends React.Component{
       {text: 'Page8', link: '/menus/8', imageSrc: img8},
       {text: 'Page9', link: '/menus/9', imageSrc: img9},
       {text: 'Page10', link: '/menus/10', imageSrc: img10},
-			{text: 'Page11', link: '/menus/11', imageSrc: img11},
+      {text: 'Page11', link: '/menus/11', imageSrc: img11},
       {text: 'Page12', link: '/menus/12', imageSrc: img12},
       {text: 'Page13', link: '/menus/13', imageSrc: img13},
       {text: 'Page14', link: '/menus/14', imageSrc: img14},
-			{text: 'Page15', link: '/menus/15', imageSrc: img15},
+      {text: 'Page15', link: '/menus/15', imageSrc: img15},
       {text: 'Page16', link: '/menus/16', imageSrc: img16},
       {text: 'Page17', link: '/menus/17', imageSrc: img17},
       {text: 'Page18', link: '/menus/18', imageSrc: img18},
-    ]
-	  return(
-			<div className="home_wrapper">
-      {pageValues.map((value, key)=> (
-      <div className="home_image__container" key={key}>
-			  <div className="home_title">
-				  {value.text}
-				</div>
-        <Link to={value.link}>
-          <img src={value.imageSrc} alt="" className="home_image"/>
-        </Link>
-			</div>
-			))}
-
-			</div>
-	  );
+    ];
+    return(
+      <div className="home_wrapper">
+        {pageValues.map((value, key)=> (
+          <div className="home_image__container" key={key}>
+            <div className="home_title">
+              {value.text}
+            </div>
+            <Link to={value.link}>
+              <img src={value.imageSrc} alt="" className="home_image"/>
+            </Link>
+          </div>
+        ))}
+      </div>
+    );
   }
 }
 
