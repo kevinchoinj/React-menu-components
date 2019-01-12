@@ -9,7 +9,10 @@ const DEFAULT_STATE={
 export default(state=DEFAULT_STATE, payload)=> {
   switch(payload.type){
   case SET_CURRENT_PHOTO:
-    return state = {...state, currentPhoto: payload.currentPhoto};
+    return state = {
+      ...state,
+      currentPhoto: payload.currentPhoto
+    };
 
   default:
     return state;

@@ -82,7 +82,7 @@ class MenuCarousel extends React.Component {
                   <Motion key={i} style={style}>
                     {style =>
                       <div>
-                        <img className="demo4-photo" src={imageValues[currentPhoto]} style={style} alt=""/>
+                        <img className="demo4-photo" src={imageValues[i]} style={style} alt=""/>
                       </div>
                     }
                   </Motion>

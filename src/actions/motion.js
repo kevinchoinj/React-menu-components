@@ -5,4 +5,4 @@ export const setCurrentPhoto = (currentPhoto) => {
     type: SET_CURRENT_PHOTO,
     currentPhoto,
   };
-}
+};
