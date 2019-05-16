@@ -41,7 +41,6 @@ class MenuCarousel extends React.Component {
   render() {
     const {photos} = this.state;
     const {
-      currentPhoto,
       menuDisplay,
     }=this.props;
 
@@ -98,7 +97,6 @@ class MenuCarousel extends React.Component {
 
 export default connect(
   (state, ownProps) => ({
-    currentPhoto: state.motion.currentPhoto,
     menuDisplay:state.menu.menuDisplay,
   }),
   dispatch => ({

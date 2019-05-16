@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import './App.css';
@@ -50,10 +50,12 @@ import MenuPageSeventeen from './pages/MenuPage17';
 import MenuPageEighteen from './pages/MenuPage18';
 import MenuPageNineteen from './pages/MenuPage19';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
+import MenuProvider from 'context/MenuProvider';
+
+const App = () => {
+  return (
+    <div className="App">
+      <MenuProvider>
         <Switch>
           <Route exact path="/"
             render={(props)=>
@@ -176,9 +178,9 @@ class App extends Component {
           />
         </Switch>
         <MainMenuWrap/>
-      </div>
-    );
-  }
-}
+      </MenuProvider>
+    </div>
+  );
+};
 
 export default App;

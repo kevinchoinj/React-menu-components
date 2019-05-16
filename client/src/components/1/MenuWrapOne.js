@@ -6,11 +6,11 @@ import MenuTextOne from './MenuTextOne';
 class MenuWrapOne extends React.Component{
   render(){
     return(
-      <div>
+      <>
         <MenuButtonOne />
         <MenuPanelOne />
         <MenuTextOne />
-      </div>
+      </>
     );
   }
 }
