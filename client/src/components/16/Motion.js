@@ -97,6 +97,7 @@ class MenuCarousel extends React.Component {
 
 export default connect(
   (state, ownProps) => ({
+    currentPhoto: state.motion.currentPhoto,
     menuDisplay:state.menu.menuDisplay,
   }),
   dispatch => ({

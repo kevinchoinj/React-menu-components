@@ -1,42 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import * as menuActions from '../../actions/menu';
+import MenuContext from 'context/menu-context.js';
 
-class MenuButton extends React.Component{
-  toggleMenu = () => {
-    this.props.menuActions.toggleMenu(!this.props.menuDisplay);
-  }
-  render(){
-    const {
-      menuDisplay,
-    } = this.props;
+const MenuButton = () => {
+  const { handleMenu, menuDisplay } = useContext(MenuContext);
 
-    const buttonName = classNames({
-      'two_menu_button__container': true,
-      'two_menu_button__container--displayed': menuDisplay,
-    });
-    return(
-      <div
-        onClick = {this.toggleMenu}
-        className = "two_menu_button"
-      >
-        <div className = {buttonName}>
-          <span className = "two_menu_button__line"/>
-          <span className = "two_menu_button__line"/>
-          <span className = "two_menu_button__line"/>
-        </div>
+  const buttonName = classNames({
+    'two_menu_button__container': true,
+    'two_menu_button__container--displayed': menuDisplay,
+  });
+
+  return(
+    <div
+      onClick = {() => handleMenu()}
+      className = "two_menu_button"
+    >
+      <div className = {buttonName}>
+        <span className = "two_menu_button__line"/>
+        <span className = "two_menu_button__line"/>
+        <span className = "two_menu_button__line"/>
       </div>
-    );
-  }
-}
-
-export default connect(
-  (state, ownProps) => ({
-    menuDisplay:state.menu.menuDisplay,
-  }),
-  dispatch => ({
-    menuActions: bindActionCreators(menuActions, dispatch),
-  }),
-)(MenuButton);
+    </div>
+  );
+};
+export default MenuButton;

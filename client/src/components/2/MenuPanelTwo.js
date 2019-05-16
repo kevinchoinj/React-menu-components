@@ -1,33 +1,22 @@
-import React from 'react';
-import {connect} from 'react-redux';
+import React, { useContext } from 'react';
 import classNames from 'classnames';
+import MenuContext from 'context/menu-context.js';
 import MenuTextTwo from './MenuTextTwo';
 
-class MenuPanelOne extends React.Component{
-  render(){
-    const {
-      menuDisplay,
-    } = this.props;
+const MenuPanelOne = () => {
+  const { menuDisplay } = useContext(MenuContext);
+  const menuClassName = classNames(
+    'two_menu_panel',
+    {
+      'two_menu_panel--display':menuDisplay
+    }
+  );
 
-    const menuClassName = classNames(
-      'two_menu_panel',
-      {
-        'two_menu_panel--display':menuDisplay
-      }
-    );
+  return(
+    <div className = {menuClassName}>
+      <MenuTextTwo/>
+    </div>
+  );
+};
 
-    return(
-      <div className = {menuClassName}>
-        <MenuTextTwo />
-      </div>
-    );
-  }
-}
-
-export default connect(
-  (state, ownProps) => ({
-    menuDisplay:state.menu.menuDisplay,
-  }),
-  dispatch => ({
-  }),
-)(MenuPanelOne);
+export default MenuPanelOne;
