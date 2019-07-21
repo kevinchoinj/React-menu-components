@@ -1,6 +1,60 @@
-html {
-  overflow-x: hidden;
-}
 body {
-  background-color: #aaa;
+  margin: 0px;
+  background-color: #666;
+}
+html {
+  overflow: hidden;
+  position: fixed;
+}
+.home_image:hover {
+  opacity: .6;
+}
+.home_image__container {
+  height: 200px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 1rem;
+  position: relative;
+}
+.home_wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 4rem;
+}
+.home_title {
+  margin-bottom: 14px;
+  position: absolute;
+  font-size: 1rem;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  top: -1.5rem;
+}
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  min-width: 100vw;
+}
+.main .buttons {
+  position: fixed;
+  top: 6px;
+  left: 6px;
+  display: flex;
+}
+.main .buttons a{
+  text-decoration: none;
+  color: #000;
+  font-family: 'Fira Sans', Helvetica, sans-serif;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  margin: 0 3px;
+}
+.main .button {
+  padding: 6px;
+  transition: .2s ease;
+  color: #fff;
+}
+.main .button:hover {
+  background-color: #444;
 }

@@ -57,11 +57,6 @@ const App = () => {
     <div className="App">
       <MenuProvider>
         <Switch>
-          <Route exact path="/"
-            render={(props)=>
-              <Home {...props} />
-            }
-          />
           <Route
             exact path="/menus/1"
             render={(props) =>
@@ -176,6 +171,7 @@ const App = () => {
               <MenuPageNineteen {...props} />
             }
           />
+          <Route path="/:id" render={(props)=> <Home {...props} />}/>
         </Switch>
         <MainMenuWrap/>
       </MenuProvider>
