@@ -1,18 +1,26 @@
 import React, { useContext } from 'react';
 import classNames from 'classnames';
-import MenuContext from 'context/menu-context.js';
+import {MenuContext} from 'context/MenuContext.js';
+import styled from 'styled-components';
 
 const MenuButton = () => {
-  const { handleMenu, menuDisplay } = useContext(MenuContext);
+  const { state, dispatch } = useContext(MenuContext);
+
+  const handleToggle = () => {
+    dispatch({
+      type: 'TOGGLE_MENU', 
+      payload: !state.menuDisplay
+    });
+  };
 
   const buttonName = classNames({
     'one_menu_button__container': true,
-    'one_menu_button__container--displayed': menuDisplay,
+    'one_menu_button__container--displayed': state.menuDisplay,
   });
 
   return(
     <div
-      onClick = {() => handleMenu()}
+      onClick = {() => handleToggle()}
       className = "one_menu_button"
     >
       <div className = {buttonName}>

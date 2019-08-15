@@ -1,8 +1,28 @@
 import React, { useContext } from 'react';
 import {Link} from 'react-router-dom';
-import classNames from 'classnames';
-import MenuContext from 'context/menu-context.js';
+import {MenuContext} from 'context/MenuContext.js';
+import styled from 'styled-components';
 
+const StyledWrapper = styled.div`
+  position: fixed;
+  bottom: 80px;
+  left: 25px;
+  transition: .8s ease-out;
+  z-index: 4;
+  opacity: ${props => props.menuDisplay ? 1 : 0};
+  pointer-events: ${props => props.menuDisplay ? 'auto' : 'none'};
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 3rem;
+    transition: .2s ease-out;
+    &:hover, &:focus {
+      color: #444;
+      text-decoration: none;
+    }
+  }
+`;
 const menuValues = [
   {text: 'Menu1', link: '/menus/1'},
   {text: 'Menu2', link: '/menus/2'},
@@ -10,27 +30,28 @@ const menuValues = [
 ];
 
 const MenuTextOne = () => {
-  const { handleMenu, menuDisplay } = useContext(MenuContext);
-  const menuClassName = classNames(
-    'one_menu_panel__links',
-    {
-      'one_menu_panel__links--display': menuDisplay
-    }
-  );
+  const { state, dispatch } = useContext(MenuContext);
+
+  const handleToggle = () => {
+    dispatch({
+      type: 'TOGGLE_MENU', 
+      payload: !state.menuDisplay
+    });
+  };
+
   return(
-    <div className = {menuClassName}>
-      {menuValues.map((value, index)=>(
-        <div key={index}>
+    <StyledWrapper menuDisplay={state.menuDisplay}>
+      {menuValues.map((value)=>(
+        <div key={value.link}>
           <Link
             to={value.link}
-            className = 'one_menu_panel__link'
-            onClick = {() => handleMenu()}
+            onClick = {() => handleToggle()}
           >
             {value.text}
           </Link>
         </div>
       ))}
-    </div>
+    </StyledWrapper>
   );
 };
 

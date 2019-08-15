@@ -50,7 +50,7 @@ import MenuPageSeventeen from './pages/MenuPage17';
 import MenuPageEighteen from './pages/MenuPage18';
 import MenuPageNineteen from './pages/MenuPage19';
 
-import MenuProvider from 'context/MenuProvider';
+import {MenuProvider} from 'context/MenuContext';
 
 const App = () => {
   return (
