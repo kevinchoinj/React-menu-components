@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 
 import './App.css';
 
-import './styles/menu1.css';
 import './styles/menu2.css';
 import './styles/menu3.css';
 import './styles/menu4.css';
